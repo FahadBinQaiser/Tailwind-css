@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@flaticon/font/flaticon.css"
+    />
   </head>
   <body>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+    <!-- <h1 class="text-3xl font-bold underline">Hello world!</h1>
     <button
       class="bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3"
     >
@@ -23,6 +27,42 @@
         <div class="text-xl font-medium text-black">ChitChat</div>
         <p class="text-slate-500">You have a new message!</p>
       </div>
+    </div> -->
+    <div class="navbar h-48 bg-white px-20 border flex space-x-100 shadow-lg">
+      <img class="h-24 size-36" src="airbnb logo.png" alt="" />
+
+      <div class="flex mx-auto mt-8 h-12 align-center cursor-pointer text-xl">
+        <h1 class="p-2 font-medium">Stays</h1>
+        <h1 class="p-2 hover:bg-gray-400 rounded-full px-8">Experience</h1>
+      </div>
+
+      <div class="flex flex-row justify-end mt-8 cursor-pointer">
+        <h1
+          class="h-11 flex justify-center p-2 hover:bg-gray-400 rounded-full px-4"
+        >
+          Airbnb your home
+        </h1>
+        <div
+          class="p-2 hover:bg-gray-400 rounded-full w-11 h-11 flex justify-center mr-4"
+        >
+          <ion-icon class="text-2xl" name="earth-outline"></ion-icon>
+        </div>
+        <div
+          class="text-2xl border rounded-full w-20 h-10 align-center p-1 pl-3"
+        >
+          <ion-icon name="menu-outline"></ion-icon>
+          <ion-icon name="person-circle-outline"></ion-icon>
+        </div>
+      </div>
     </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
