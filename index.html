@@ -9,32 +9,20 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@flaticon/font/flaticon.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <!-- <h1 class="text-3xl font-bold underline">Hello world!</h1>
-    <button
-      class="bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3"
-    >
-      hello valorant
-    </button>
-    <div
-      class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4"
-    >
-      <div class="shrink-0">
-        <img class="size-12" src="/img/logo.svg" alt="ChitChat Logo" />
-      </div>
-      <div>
-        <div class="text-xl font-medium text-black">ChitChat</div>
-        <p class="text-slate-500">You have a new message!</p>
-      </div>
-    </div> -->
-    <div class="navbar h-48 bg-white px-20 border flex flex-col shadow-lg">
+    <!-- navbar -->
+    <div class="navbar h-48 bg-white px-20 border flex flex-col">
       <div class="flex items-center justify-between h-20">
         <div class="logo">
           <img class="h-16" src="airbnb logo.png" alt="Airbnb Logo" />
         </div>
 
-        <div class="flex text-lg text-center">
+        <div class="flex justify-center pl-24 items-center text-lg text-center">
           <h1 class="p-2 font-medium">Stays</h1>
           <h1 class="p-2 hover:bg-gray-400 rounded-full px-4">Experience</h1>
         </div>
@@ -57,7 +45,149 @@
         </div>
       </div>
     </div>
-
+    <!-- navbar -->
+    <!-- Search bar -->
+    <div class="wrapper flex mt-8 px-16 hover:font-bold hover:cursor-pointer">
+      <div class="item px-4 text-center hover:border-b-2 pb-2">
+        <ion-icon name="ticket-outline"></ion-icon>
+        <h1 class="font-light text-24">Icons</h1>
+      </div>
+      <div class="item px-4 text-center hover:border-b-2 pb-2">
+        <ion-icon name="bed-outline"></ion-icon>
+        <h1 class="font-light text-24">Rooms</h1>
+      </div>
+      <div class="item px-4 text-center hover:border-b-2 pb-2">
+        <ion-icon name="logo-windows"></ion-icon>
+        <h1 class="font-light text-24">Amazing Views</h1>
+      </div>
+      <div class="item px-4 text-center hover:border-b-2 pb-2">
+        <ion-icon name="business-outline"></ion-icon>
+        <h1 class="font-light text-24">Top Cities</h1>
+      </div>
+      <div class="item px-4 text-center hover:border-b-2 pb-2">
+        <ion-icon name="walk-outline"></ion-icon>
+        <h1 class="font-light text-24">Country side</h1>
+      </div>
+      <div class="item px-4 text-center hover:border-b-2 pb-2">
+        <ion-icon name="fast-food-outline"></ion-icon>
+        <h1 class="font-light text-24">Luxe</h1>
+      </div>
+      <div class="item px-4 text-center hover:border-b-2 pb-2">
+        <ion-icon name="business-outline"></ion-icon>
+        <h1 class="font-light text-24">Mansions</h1>
+      </div>
+      <div class="item px-4 text-center hover:border-b-2 pb-2">
+        <ion-icon name="happy-outline"></ion-icon>
+        <h1 class="font-light text-24">LakeFront</h1>
+      </div>
+      <div class="item px-4 text-center hover:border-b-2 pb-2">
+        <ion-icon name="fast-food-outline"></ion-icon>
+        <h1 class="font-light text-24">Bed and Breakfast</h1>
+      </div>
+      <div class="item px-4 text-center hover:border-b-2 pb-2">
+        <ion-icon name="rainy-outline"></ion-icon>
+        <h1 class="font-light text-24">Amazing Pools</h1>
+      </div>
+      <div class="item px-4 text-center hover:border-b-2 pb-2">
+        <ion-icon name="home-outline"></ion-icon>
+        <h1 class="font-light text-24">Cabins</h1>
+      </div>
+      <div class="item px-4 text-center hover:border-b-2 pb-2">
+        <ion-icon name="leaf-outline"></ion-icon>
+        <h1 class="font-light text-24">Farms</h1>
+      </div>
+      <div class="item px-4 text-center hover:border-b-2 pb-2">
+        <ion-icon name="water-outline"></ion-icon>
+        <h1 class="font-light text-24">Islands</h1>
+      </div>
+      <div class="item px-4 text-center hover:border-b-2 pb-2">
+        <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+        <h1 class="font-light text-24">Caves</h1>
+      </div>
+      <div class="item px-2 text-center">
+        <ion-icon
+          name="chevron-forward-circle-outline"
+          class="text-4xl"
+        ></ion-icon>
+      </div>
+    </div>
+    <!-- Search bar -->
+    <!-- Card section -->
+    <div class="grid grid-cols-4 max-w-full mx-20 mt-8 gap-8 font-[Roboto]">
+      <div class="box1 leading-tight">
+        <img
+          src="icons/room.webp"
+          class="h-64 object-cover w-full rounded-lg"
+          alt=""
+        />
+        <h2 class="room mt-2 font-[Roboto] font-medium">
+          Stay in Prince's Purple Rain house
+        </h2>
+        <p class="text-slate-500">Hosted By Wendy and Lisa</p>
+        <h2 class="coming font-[Roboto] font-medium">Coming September</h2>
+      </div>
+      <div class="box2 leading-tight">
+        <img
+          src="icons/dojacat.webp"
+          class="h-64 object-cover w-full rounded-lg"
+          alt=""
+        />
+        <h2 class="room mt-2 font-[Roboto] font-medium">
+          Join a living room session with Doja
+        </h2>
+        <p class="text-slate-500">Hosted By Doja Cat</p>
+        <h2 class="coming font-[Roboto] font-medium">Coming October</h2>
+      </div>
+      <div class="box3 leading-tight">
+        <img
+          src="icons/house.webp"
+          class="h-64 object-cover w-full rounded-lg"
+          alt=""
+        />
+        <h2 class="room mt-2 font-[Roboto] font-medium">
+          Sleepover at Polly Pocket’s Compact
+        </h2>
+        <p class="text-slate-500">Hosted by Polly Pocket</p>
+        <h2 class="coming font-[Roboto] font-medium">Sold out</h2>
+      </div>
+      <div class="box4 leading-tight">
+        <img
+          src="icons/clothes.webp"
+          class="h-64 object-cover w-full rounded-lg"
+          alt=""
+        />
+        <h2 class="room mt-2 font-[Roboto] font-medium">
+          Playdate at Polly Pocket’s Compact
+        </h2>
+        <p class="text-slate-500">Hosted By Polly Pocket</p>
+        <h2 class="coming font-[Roboto] font-medium">Sold out</h2>
+      </div>
+      <div class="box5 leading-tight">
+        <img
+          src="icons/kevin-hart.webp"
+          class="h-64 object-cover w-full rounded-lg"
+          alt=""
+        />
+        <h2 class="room mt-2 font-[Roboto] font-medium">
+          Go Vip with Kevin-Hart
+        </h2>
+        <p class="text-slate-500">Hosted By Kevin-Hart</p>
+        <h2 class="coming font-[Roboto] font-medium">Sold out</h2>
+      </div>
+      <div class="box6 leading-tight">
+        <img
+          src="icons/ufo.webp"
+          class="h-64 object-cover w-full rounded-lg"
+          alt=""
+        />
+        <h2 class="room mt-2 font-[Roboto] font-medium">
+          Train at the X-mansion
+        </h2>
+        <p class="text-slate-500">Hosted By Wendy and Lisa</p>
+        <h2 class="coming font-[Roboto] font-medium">Sold out</h2>
+      </div>
+    </div>
+    <!-- Card section -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
