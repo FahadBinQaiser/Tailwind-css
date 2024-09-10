@@ -28,30 +28,65 @@
         <p class="text-slate-500">You have a new message!</p>
       </div>
     </div> -->
-    <div class="navbar h-48 bg-white px-20 border flex space-x-100 shadow-lg">
-      <img class="h-24 size-36" src="airbnb logo.png" alt="" />
+    <div class="navbar h-48 bg-white px-20 border flex flex-col shadow-lg">
+      <div class="flex items-center justify-between h-20">
+        <div class="logo">
+          <img class="h-16" src="airbnb logo.png" alt="Airbnb Logo" />
+        </div>
 
-      <div class="flex mx-auto mt-8 h-12 align-center cursor-pointer text-xl">
-        <h1 class="p-2 font-medium">Stays</h1>
-        <h1 class="p-2 hover:bg-gray-400 rounded-full px-8">Experience</h1>
+        <div class="flex text-lg text-center">
+          <h1 class="p-2 font-medium">Stays</h1>
+          <h1 class="p-2 hover:bg-gray-400 rounded-full px-4">Experience</h1>
+        </div>
+
+        <div class="flex items-center space-x-4">
+          <h1 class="p-2 hover:bg-gray-400 rounded-full px-4 cursor-pointer">
+            Airbnb your home
+          </h1>
+          <div
+            class="p-2 hover:bg-gray-400 rounded-full flex items-center justify-center"
+          >
+            <ion-icon class="text-2xl" name="earth-outline"></ion-icon>
+          </div>
+          <div
+            class="flex items-center text-2xl border rounded-full w-20 h-10 p-1 pl-4 cursor-pointer"
+          >
+            <ion-icon class="pr-2" name="menu-outline"></ion-icon>
+            <ion-icon class="pr-2" name="person-circle-outline"></ion-icon>
+          </div>
+        </div>
       </div>
 
-      <div class="flex flex-row justify-end mt-8 cursor-pointer">
-        <h1
-          class="h-11 flex justify-center p-2 hover:bg-gray-400 rounded-full px-4"
-        >
-          Airbnb your home
-        </h1>
+      <div
+        class="container2 flex justify-center items-center shadow-lg mt-4 mb-4 border border-gray-300 rounded-full max-w-5xl h-18 mx-auto"
+      >
         <div
-          class="p-2 hover:bg-gray-400 rounded-full w-11 h-11 flex justify-center mr-4"
+          class="rounded-full pr-16 border-r-2 hover:bg-gray-200 p-2 pl-16 cursor-pointer"
         >
-          <ion-icon class="text-2xl" name="earth-outline"></ion-icon>
+          <h1 class="text-md font-medium">Where</h1>
+          <p class="text-gray-700 text-sm">Search destinations</p>
         </div>
         <div
-          class="text-2xl border rounded-full w-20 h-10 align-center p-1 pl-3"
+          class="rounded-full pr-16 hover:bg-gray-200 p-2 border-r-2 cursor-pointer"
         >
-          <ion-icon name="menu-outline"></ion-icon>
-          <ion-icon name="person-circle-outline"></ion-icon>
+          <h1 class="text-md font-medium">Check In</h1>
+          <p class="text-gray-700 text-sm">Add dates</p>
+        </div>
+        <div
+          class="rounded-[100px] pr-16 border-r-2 hover:bg-gray-200 p-2 cursor-pointer"
+        >
+          <h1 class="text-md font-medium">Check out</h1>
+          <p class="text-gray-700 text-sm">Add dates</p>
+        </div>
+        <div class="rounded-[50px] pr-16 hover:bg-gray-200 p-2 cursor-pointer">
+          <h1 class="text-md font-medium">Who</h1>
+          <p class="text-gray-700 text-sm">Add guests</p>
+        </div>
+        <div class="rounded-[50px] items-center pr-16">
+          <ion-icon
+            class="text-2xl items-center cursor-pointer bg-red-600 p-2 border rounded-full w-8 h-8"
+            name="search-outline"
+          ></ion-icon>
         </div>
       </div>
     </div>
