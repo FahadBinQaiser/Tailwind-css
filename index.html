@@ -20,9 +20,9 @@
   </head>
   <body>
     <!-- navbar -->
-    <div class="mt-8 h-34 md:hidden border-b-2 px-4 shadow-lg">
+    <div class="mt-8 h-34 md:block lg:hidden border-b-2 px-4 shadow-lg">
       <div
-        class="bar_mobile flex justify-start font-[Roboto] items-center px-8 shadow-xl mt-8 rounded-full bg-gray-100 h-18 sm:hidden"
+        class="bar_mobile flex justify-start font-[Roboto] items-center px-8 shadow-xl mt-8 rounded-full bg-gray-100 h-18 sm:flex sm:p-2"
       >
         <ion-icon
           class="text-2xl font-bold p-2 rounded-full w-4 h-4 cursor-pointer"
@@ -40,7 +40,7 @@
         </div>
       </div>
       <div
-        class="wrapper flex mt-8 px-12 hover:font-bold hover:cursor-pointer md:hidden"
+        class="wrapper flex mt-8 justify-center px-12 hover:font-bold hover:cursor-pointer md:flex md:justify-center"
       >
         <div class="item px-4 text-center hover:border-b-2 pb-2">
           <ion-icon name="ticket-outline"></ion-icon>
@@ -65,7 +65,7 @@
       </div>
     </div>
     <div
-      class="navbar h-48 bg-white hidden lg:block px-20 border flex flex-col"
+      class="navbar h-48 w-full bg-white hidden lg:flex px-20 border flex flex-col"
     >
       <div class="flex items-center justify-between h-20">
         <div class="logo">
@@ -130,7 +130,9 @@
     </div>
     <!-- navbar -->
     <!-- Search bar -->
-    <div class="wrapper flex mt-8 px-16 hover:font-bold hover:cursor-pointer">
+    <div
+      class="wrapper flex mt-8 px-16 hover:font-bold hover:cursor-pointer sm:hidden md:flex lg:flex"
+    >
       <div class="item px-4 hidden lg:block text-center hover:border-b-2 pb-2">
         <ion-icon name="ticket-outline"></ion-icon>
         <h1 class="font-light text-24">Icons</h1>
