@@ -17,6 +17,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- navbar -->
@@ -74,60 +78,74 @@
 
         <div class="flex justify-center pl-24 items-center text-lg text-center">
           <h1 class="p-2 font-medium">Stays</h1>
-          <h1 class="p-2 hover:bg-gray-400 rounded-full px-4">Experience</h1>
+          <h1 class="p-2 hover:bg-gray-100 font-light rounded-full px-4">
+            Experience
+          </h1>
         </div>
 
         <div class="flex items-center space-x-4">
-          <h1 class="p-2 hover:bg-gray-400 rounded-full px-4 cursor-pointer">
+          <h1
+            class="p-2 hover:bg-gray-100 font-medium rounded-full px-4 cursor-pointer"
+          >
             Airbnb your home
           </h1>
           <div
-            class="p-2 hover:bg-gray-400 rounded-full flex items-center justify-center"
+            class="p-2 hover:bg-gray-100 rounded-full flex items-center justify-center"
           >
             <ion-icon class="text-2xl" name="earth-outline"></ion-icon>
           </div>
           <div
-            class="flex items-center text-2xl border rounded-full w-20 h-10 p-1 pl-4 cursor-pointer"
+            class="flex items-center text-2xl border rounded-full w-24 h-12 pl-4 cursor-pointer hover:shadow"
           >
             <ion-icon class="pr-2" name="menu-outline"></ion-icon>
-            <ion-icon class="pr-2" name="person-circle-outline"></ion-icon>
+            <i class="bx bxs-user-circle text-4xl text-gray-500"></i>
           </div>
         </div>
       </div>
 
       <div
-        class="container2 flex hidden lg:flex justify-center items-center shadow-lg mt-4 mb-4 border border-gray-300 rounded-full max-w-4xl h-18 mx-auto"
+        class="container2 flex hidden lg:flex justify-center items-center shadow-lg mt-4 mb-4 border border-gray-300 rounded-full max-w-5xl h-18 mx-auto"
       >
-        <div
-          class="rounded-full pr-16 border-r-2 hover:bg-gray-200 p-2 pl-16 cursor-pointer"
-        >
-          <h1 class="text-md font-medium">Where</h1>
-          <p class="text-gray-700 text-sm">Search destinations</p>
-        </div>
-        <div
-          class="rounded-full pr-16 hover:bg-gray-200 p-2 border-r-2 cursor-pointer"
-        >
-          <h1 class="text-md font-medium">Check In</h1>
-          <p class="text-gray-700 text-sm">Add dates</p>
-        </div>
-        <div
-          class="rounded-[100px] pr-16 border-r-2 hover:bg-gray-200 p-2 cursor-pointer"
-        >
-          <h1 class="text-md font-medium">Check out</h1>
-          <p class="text-gray-700 text-sm">Add dates</p>
-        </div>
-        <div class="rounded-[50px] pr-16 hover:bg-gray-200 p-2 cursor-pointer">
-          <h1 class="text-md font-medium">Who</h1>
-          <p class="text-gray-700 text-sm">Add guests</p>
-        </div>
-        <div class="rounded-[50px] items-center pr-16">
-          <ion-icon
-            class="text-2xl items-center cursor-pointer bg-red-600 p-2 border rounded-full w-8 h-8"
-            name="search-outline"
-          ></ion-icon>
+        <div class="rounded-full flex relative w-full font-[Roboto]">
+          <div
+            class="rounded pr-16 hover:bg-gray-200 hover:rounded-full p-2 pl-16 cursor-pointer px-8"
+          >
+            <h1 class="text-sm font-medium">Where</h1>
+            <p class="text-gray-500 text-sm">Search destinations</p>
+          </div>
+          <div class="h-8 mt-3 w-px bg-gray-300"></div>
+          <div
+            class="rounded pr-16 hover:bg-gray-200 p-2 hover:rounded-full cursor-pointer px-8"
+          >
+            <h1 class="text-sm font-medium">Check In</h1>
+            <p class="text-gray-500 text-sm">Add dates</p>
+          </div>
+          <div class="h-8 mt-3 w-px bg-gray-300"></div>
+          <div
+            class="rounded pr-16 hover:bg-gray-200 hover:rounded-full p-2 cursor-pointer px-8"
+          >
+            <h1 class="text-sm font-medium">Check out</h1>
+            <p class="text-gray-500 text-sm">Add dates</p>
+          </div>
+          <div class="h-8 mt-3 w-px bg-gray-300"></div>
+          <div
+            class="rounded pr-40 hover:rounded-full hover:bg-gray-200 p-2 cursor-pointer px-8"
+          >
+            <h1 class="text-sm font-medium">Who</h1>
+            <p class="text-gray-500 text-sm">Add guests</p>
+          </div>
+          <div
+            class="rounded absolute right-0 top-1 pr-2 flex justify-center items-center"
+          >
+            <ion-icon
+              class="text-8 text-white items-center cursor-pointer bg-red-600 p-4 border rounded-full w-4 h-4"
+              name="search-outline"
+            ></ion-icon>
+          </div>
         </div>
       </div>
     </div>
+
     <!-- navbar -->
     <!-- Search bar -->
     <div
@@ -135,59 +153,59 @@
     >
       <div class="item px-4 hidden lg:block text-center hover:border-b-2 pb-2">
         <ion-icon name="ticket-outline"></ion-icon>
-        <h1 class="font-light text-24">Icons</h1>
+        <h1 class="font-light">Icons</h1>
       </div>
       <div class="item px-4 hidden lg:block text-center hover:border-b-2 pb-2">
         <ion-icon name="bed-outline"></ion-icon>
-        <h1 class="font-light text-24">Rooms</h1>
+        <h1 class="font-light">Rooms</h1>
       </div>
       <div class="item px-4 hidden lg:block text-center hover:border-b-2 pb-2">
         <ion-icon name="logo-windows"></ion-icon>
-        <h1 class="font-light text-24">Amazing Views</h1>
+        <h1 class="font-light">Amazing Views</h1>
       </div>
       <div class="item px-4 hidden lg:block text-center hover:border-b-2 pb-2">
         <ion-icon name="business-outline"></ion-icon>
-        <h1 class="font-light text-24">Top Cities</h1>
+        <h1 class="font-light">Top Cities</h1>
       </div>
       <div class="item px-4 hidden lg:block text-center hover:border-b-2 pb-2">
         <ion-icon name="walk-outline"></ion-icon>
-        <h1 class="font-light text-24">Country side</h1>
+        <h1 class="font-light">Country side</h1>
       </div>
       <div class="item px-4 hidden lg:block text-center hover:border-b-2 pb-2">
         <ion-icon name="fast-food-outline"></ion-icon>
-        <h1 class="font-light text-24">Luxe</h1>
+        <h1 class="font-light">Luxe</h1>
       </div>
       <div class="item px-4 hidden lg:block text-center hover:border-b-2 pb-2">
         <ion-icon name="business-outline"></ion-icon>
-        <h1 class="font-light text-24">Mansions</h1>
+        <h1 class="font-light">Mansions</h1>
       </div>
       <div class="item px-4 hidden lg:block text-center hover:border-b-2 pb-2">
         <ion-icon name="happy-outline"></ion-icon>
-        <h1 class="font-light text-24">LakeFront</h1>
+        <h1 class="font-light">LakeFront</h1>
       </div>
       <div class="item px-4 hidden lg:block text-center hover:border-b-2 pb-2">
         <ion-icon name="fast-food-outline"></ion-icon>
-        <h1 class="font-light text-24">Bed and Breakfast</h1>
+        <h1 class="font-light">Bed and Breakfast</h1>
       </div>
       <div class="item px-4 hidden lg:block text-center hover:border-b-2 pb-2">
         <ion-icon name="rainy-outline"></ion-icon>
-        <h1 class="font-light text-24">Amazing Pools</h1>
+        <h1 class="font-light">Amazing Pools</h1>
       </div>
       <div class="item px-4 hidden lg:block text-center hover:border-b-2 pb-2">
         <ion-icon name="home-outline"></ion-icon>
-        <h1 class="font-light text-24">Cabins</h1>
+        <h1 class="font-light">Cabins</h1>
       </div>
       <div class="item px-4 hidden lg:block text-center hover:border-b-2 pb-2">
         <ion-icon name="leaf-outline"></ion-icon>
-        <h1 class="font-light text-24">Farms</h1>
+        <h1 class="font-light">Farms</h1>
       </div>
       <div class="item px-4 hidden lg:block text-center hover:border-b-2 pb-2">
         <ion-icon name="water-outline"></ion-icon>
-        <h1 class="font-light text-24">Islands</h1>
+        <h1 class="font-light">Islands</h1>
       </div>
       <div class="item px-4 hidden lg:block text-center hover:border-b-2 pb-2">
         <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
-        <h1 class="font-light text-24">Caves</h1>
+        <h1 class="font-light">Caves</h1>
       </div>
       <div class="item px-2 hidden lg:block text-center">
         <ion-icon
