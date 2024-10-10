@@ -9,6 +9,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@flaticon/font/flaticon.css"
     />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- <h1 class="text-3xl font-bold underline">Hello world!</h1>
@@ -28,65 +36,113 @@
         <p class="text-slate-500">You have a new message!</p>
       </div>
     </div> -->
-    <div class="navbar h-48 bg-white px-20 border flex flex-col shadow-lg">
+    <div
+      class="navbar h-38 w-full bg-white hidden lg:flex px-8 border flex justify-between flex-col"
+    >
       <div class="flex items-center justify-between h-20">
         <div class="logo">
-          <img class="h-16" src="airbnb logo.png" alt="Airbnb Logo" />
+          <img
+            class="h-16 hover:cursor-pointer"
+            src="airbnb logo.png"
+            alt="Airbnb Logo"
+          />
         </div>
 
-        <div class="flex text-lg text-center">
-          <h1 class="p-2 font-medium">Stays</h1>
-          <h1 class="p-2 hover:bg-gray-400 rounded-full px-4">Experience</h1>
+        <div class="flex justify-center ml-48 items-center text-lg text-center">
+          <h1 class="p-2 font-semibold">Stays</h1>
+          <h1
+            class="p-2 hover:bg-gray-100 hover:text-[#444] font-medium text-[#888] rounded-full px-4"
+          >
+            Experience
+          </h1>
         </div>
 
-        <div class="flex items-center space-x-4">
-          <h1 class="p-2 hover:bg-gray-400 rounded-full px-4 cursor-pointer">
+        <div class="flex items-center space-x-2">
+          <h1
+            class="px-4 pt-4 pb-4 hover:bg-gray-100 font-medium rounded-full cursor-pointer"
+          >
             Airbnb your home
           </h1>
           <div
-            class="p-2 hover:bg-gray-400 rounded-full flex items-center justify-center"
+            class="p-4 hover:bg-gray-100 rounded-full flex items-center justify-center"
           >
-            <ion-icon class="text-2xl" name="earth-outline"></ion-icon>
+            <ion-icon class="text-xl" name="earth-outline"></ion-icon>
           </div>
           <div
-            class="flex items-center text-2xl border rounded-full w-20 h-10 p-1 pl-4 cursor-pointer"
+            class="flex items-center text-2xl border rounded-full w-34 h-12 px-2 cursor-pointer hover:shadow"
           >
             <ion-icon class="pr-2" name="menu-outline"></ion-icon>
-            <ion-icon class="pr-2" name="person-circle-outline"></ion-icon>
+            <i class="bx bxs-user-circle text-4xl text-gray-500"></i>
           </div>
         </div>
       </div>
 
       <div
-        class="container2 flex justify-center items-center shadow-lg mt-4 mb-4 border border-gray-300 rounded-full max-w-5xl h-18 mx-auto"
+        class="container2 flex hidden lg:flex justify-between items-center shadow-lg border border-gray-300 rounded-full max-w-[880px] h-[65px] shadow-xl mx-auto mb-4"
       >
         <div
-          class="rounded-full pr-16 border-r-2 hover:bg-gray-200 p-2 pl-16 cursor-pointer"
+          class="rounded-full flex justify-between relative w-full font-[Roboto]"
         >
-          <h1 class="text-md font-medium">Where</h1>
-          <p class="text-gray-700 text-sm">Search destinations</p>
-        </div>
-        <div
-          class="rounded-full pr-16 hover:bg-gray-200 p-2 border-r-2 cursor-pointer"
-        >
-          <h1 class="text-md font-medium">Check In</h1>
-          <p class="text-gray-700 text-sm">Add dates</p>
-        </div>
-        <div
-          class="rounded-[100px] pr-16 border-r-2 hover:bg-gray-200 p-2 cursor-pointer"
-        >
-          <h1 class="text-md font-medium">Check out</h1>
-          <p class="text-gray-700 text-sm">Add dates</p>
-        </div>
-        <div class="rounded-[50px] pr-16 hover:bg-gray-200 p-2 cursor-pointer">
-          <h1 class="text-md font-medium">Who</h1>
-          <p class="text-gray-700 text-sm">Add guests</p>
-        </div>
-        <div class="rounded-[50px] items-center pr-16">
-          <ion-icon
-            class="text-2xl items-center cursor-pointer bg-red-600 p-2 border rounded-full w-8 h-8"
-            name="search-outline"
-          ></ion-icon>
+          <!-- Item 1 -->
+          <div class="relative flex items-center group">
+            <div
+              class="rounded pr-32 hover:bg-gray-200 hover:rounded-full p-[15px] pl-8 cursor-pointer"
+            >
+              <h1
+                class="text-sm leading-[1] text-[#555] font-bold font-[Roboto]"
+              >
+                Where
+              </h1>
+              <p class="text-gray-500 text-[13px]">Search destinations</p>
+            </div>
+            <div class="h-8 w-px bg-gray-300 group-hover:hidden"></div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="relative flex items-center group">
+            <div
+              class="rounded pr-16 hover:bg-gray-200 p-[15px] hover:rounded-full cursor-pointer px-8"
+            >
+              <h1 class="text-sm leading-[1] text-[#555] font-bold">
+                Check In
+              </h1>
+              <p class="text-gray-500 text-[13px]">Add dates</p>
+            </div>
+            <div class="h-8 w-px bg-gray-300 group-hover:hidden"></div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="relative flex items-center group">
+            <div
+              class="rounded pr-16 hover:bg-gray-200 hover:rounded-full p-[15px] cursor-pointer px-8"
+            >
+              <h1 class="text-sm leading-[1] text-[#555] font-bold">
+                Check out
+              </h1>
+              <p class="text-gray-500 text-[13px]">Add dates</p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="relative flex items-center group">
+            <div class="h-8 w-px bg-gray-300 group-hover:hidden"></div>
+
+            <div
+              class="rounded pr-48 hover:rounded-full hover:bg-gray-200 p-[15px] cursor-pointer pl-6"
+            >
+              <h1 class="text-sm leading-[1] text-[#555] font-bold">Who</h1>
+              <p class="text-gray-500 text-[13px]">Add guests</p>
+            </div>
+          </div>
+          <!-- Search Icon -->
+          <div
+            class="rounded absolute right-0 top-2 pr-2 flex justify-center items-center"
+          >
+            <ion-icon
+              class="text-8 text-white items-center cursor-pointer bg-red-600 p-4 border rounded-full w-4 h-4 hover:bg-rose-700"
+              name="search-outline"
+            ></ion-icon>
+          </div>
         </div>
       </div>
     </div>
