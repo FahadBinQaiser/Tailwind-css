@@ -9,7 +9,7 @@ Airbnb clone website made with tailwind css.
 ## Features
 
 - Navbar section
-- Hero section
+- Hero or Main section
 - Inspiration section
 - Footer section
 - Copyright and Policy section
