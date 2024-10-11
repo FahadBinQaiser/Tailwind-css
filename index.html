@@ -207,19 +207,43 @@
       <div
         class="grid grid-col-1 sm:grid-col-2 md:grid-col-3 lg:grid-cols-4 max-w-full mx-10 mt-8 gap-8 font-[Roboto]"
       >
-        <div class="box1 leading-tight">
+        <div class="box1 leading-tight relative group">
+          <!-- Image Box -->
           <img
+            id="image-box"
             src="icons/room.webp"
-            class="h-72 object-cover w-full rounded-lg"
-            alt=""
+            class="h-72 object-cover w-full rounded-lg transition-all duration-500 ease-in-out"
+            alt="Room Image"
           />
+
+          <!-- Text Content -->
           <h2 class="room mt-2 font-[Roboto] font-medium">
             Stay in Prince's Purple Rain house
           </h2>
           <p class="text-slate-500">Hosted By Wendy and Lisa</p>
           <h2 class="coming font-[Roboto] font-medium">Coming September</h2>
+
+          <!-- Left Button (hidden initially) -->
+          <div
+            id="left-button"
+            class="left-button opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 absolute top-28 left-0 z-[1] text-xl bg-gray-300 p-2 w-8 h-8 mt-4 ml-4 text-black flex justify-center items-center rounded-full transition-all duration-200 ease-in-out cursor-pointer"
+            onclick="previousImage()"
+            style="display: none"
+          >
+            &lt;
+          </div>
+
+          <!-- Right Button -->
+          <div
+            id="right-button"
+            class="right-button opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 absolute top-28 right-0 z-[1] text-xl bg-gray-300 p-2 w-8 h-8 mt-4 mr-4 text-black flex justify-center items-center rounded-full transition-all duration-200 ease-in-out cursor-pointer"
+            onclick="nextImage()"
+          >
+            &gt;
+          </div>
         </div>
-        <div class="box2 leading-tight">
+
+        <div class="box2 leading-tight relative group">
           <img
             src="icons/doja-cat.jpeg"
             class="h-72 object-cover w-full rounded-lg"
@@ -230,6 +254,11 @@
           </h2>
           <p class="text-slate-500">Hosted By Doja Cat</p>
           <h2 class="coming font-[Roboto] font-medium">Coming October</h2>
+          <div
+            class="hover_button opacity-0 group-hover:opacity-100 group-hover:cursor-pointer scale-90 group-hover:scale-100 absolute top-28 right-0 z-[1] text-xl bg-gray-300 p-2 w-8 h-8 mt-4 mr-4 text-black flex justify-center items-center rounded-full transition-all duration-200 ease-in-out"
+          >
+            <div>&gt;</div>
+          </div>
         </div>
       </div>
     </div>
@@ -492,5 +521,6 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script src="script.js"></script>
   </body>
 </html>
