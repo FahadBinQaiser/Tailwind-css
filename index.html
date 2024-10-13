@@ -111,15 +111,15 @@
       </div>
 
       <div
-        class="container2 flex hidden lg:flex justify-between items-center shadow-lg border border-gray-300 rounded-full max-w-[880px] h-[65px] shadow-xl mx-auto mb-4"
-      >
+        class="container2 flex hidden lg:flex justify-center items-center shadow-lg mb-4 border border-gray-300 rounded-full max-w-4xl h-18 mx-auto">
         <div
           class="rounded-full flex justify-between relative w-full font-[Roboto]"
         >
           <!-- Item 1 -->
-          <div class="relative flex items-center group">
+          <div class="relative flex items-center group" id="dropdownButton">
             <div
-              class="rounded pr-32 hover:bg-gray-200 hover:rounded-full p-[15px] pl-8 cursor-pointer"
+              class="rounded pr-32 hover:bg-gray-200 select-none hover:rounded-full p-[15px] pl-8 cursor-pointer"
+              onclick="toggleDropdown() "
             >
               <h1
                 class="text-sm leading-[1] text-[#555] font-bold font-[Roboto]"
@@ -127,6 +127,38 @@
                 Where
               </h1>
               <p class="text-gray-500 text-[13px]">Search destinations</p>
+
+            </div>
+            <div
+              class="rounded text-left p-2 z-[1] shadow-2xl bg-white absolute w-[440px] top-[70px] rounded-[30px] h-[402px] hidden"
+              id="dropdown"
+            >
+              <div class="p-4 text-left">
+                <h1 class="text-sm p-1 text-gray-700">Recent searches</h1>
+                <div class="context flex h-18 p-2 hover:bg-gray-100 rounded-lg">
+                  <div class="svg w-12 flex justify-center items-center">
+                    <ion-icon
+                      name="ticket-outline"
+                      class="text-4xl rounded-[10px] bg-yellow-100 p-2 text-[#666] group-hover:text-black"
+                    ></ion-icon>
+                  </div>
+                  <div class="islamabad flex flex-col pl-2">
+                    <h1 class="text-[15px] font-medium">Islamabad</h1>
+                    <p class="text-sm font-[400] text-gray-500">Any week</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cursor-pointer hover:bg-gray-300 p-4">Activate</div>
+              <div class="cursor-pointer hover:bg-gray-300 p-4">Activate</div>
+              <div class="cursor-pointer hover:bg-gray-300 p-4">Activate</div>
+              <div class="cursor-pointer hover:bg-gray-300 p-4">Activate</div>
+              <div
+                class="cursor-pointer hover:bg-gray-300 hover:rounded-[20px] hover:rounded-b-[25px] p-4"
+              >
+                Activate
+              </div>
+
             </div>
             <div class="h-8 w-px bg-gray-300 group-hover:hidden"></div>
           </div>
