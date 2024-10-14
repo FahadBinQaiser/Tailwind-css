@@ -131,30 +131,16 @@
               class="rounded text-left p-2 z-[1] shadow-2xl bg-white absolute w-[440px] top-[70px] rounded-[30px] h-[402px] hidden"
               id="dropdown"
             >
-              <div class="p-4 text-left">
-                <h1 class="text-sm p-1 text-gray-700">Recent searches</h1>
-                <div class="context flex h-18 p-2 hover:bg-gray-100 rounded-lg">
-                  <div class="svg w-12 flex justify-center items-center">
-                    <ion-icon
-                      name="ticket-outline"
-                      class="text-4xl rounded-[10px] bg-yellow-100 p-2 text-[#666] group-hover:text-black"
-                    ></ion-icon>
-                  </div>
-                  <div class="islamabad flex flex-col pl-2">
-                    <h1 class="text-[15px] font-medium">Islamabad</h1>
-                    <p class="text-sm font-[400] text-gray-500">Any week</p>
-                  </div>
-                </div>
-              </div>
+              <div class="p-4 text-left h-full overflow-y-auto">
+                <h1 class="text-sm pl-3 text-gray-500">Recent searches</h1>
 
-              <div class="cursor-pointer hover:bg-gray-300 p-4">Activate</div>
-              <div class="cursor-pointer hover:bg-gray-300 p-4">Activate</div>
-              <div class="cursor-pointer hover:bg-gray-300 p-4">Activate</div>
-              <div class="cursor-pointer hover:bg-gray-300 p-4">Activate</div>
-              <div
-                class="cursor-pointer hover:bg-gray-300 hover:rounded-[20px] hover:rounded-b-[25px] p-4"
-              >
-                Activate
+                <div id="recent-searches"></div>
+
+                <h1 class="pl-2 text-sm text-gray-500">
+                  Suggested destinations
+                </h1>
+
+                <div id="suggested-destinations"></div>
               </div>
             </div>
             <div class="h-8 w-px bg-gray-300 group-hover:hidden"></div>
