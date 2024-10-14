@@ -111,9 +111,10 @@
       </div>
 
       <div
-        class="container2 flex hidden lg:flex justify-center items-center shadow-lg mb-4 border border-gray-300 rounded-full max-w-4xl h-18 mx-auto"
-      >
-        <div class="rounded-full flex relative w-full font-[Roboto]">
+        class="container2 flex hidden lg:flex justify-center items-center shadow-lg mb-4 border border-gray-300 rounded-full max-w-4xl h-18 mx-auto">
+        <div
+          class="rounded-full flex justify-between relative w-full font-[Roboto]"
+        >
           <!-- Item 1 -->
           <div class="relative flex items-center group" id="dropdownButton">
             <div
@@ -126,6 +127,7 @@
                 Where
               </h1>
               <p class="text-gray-500 text-[13px]">Search destinations</p>
+
             </div>
             <div
               class="rounded text-left p-2 z-[1] shadow-2xl bg-white absolute w-[440px] top-[70px] rounded-[30px] h-[402px] hidden"
@@ -142,6 +144,7 @@
 
                 <div id="suggested-destinations"></div>
               </div>
+
             </div>
             <div class="h-8 w-px bg-gray-300 group-hover:hidden"></div>
           </div>
@@ -149,10 +152,12 @@
           <!-- Item 2 -->
           <div class="relative flex items-center group">
             <div
-              class="rounded pr-16 hover:bg-gray-200 p-2 hover:rounded-full cursor-pointer px-8"
+              class="rounded pr-16 hover:bg-gray-200 p-[15px] hover:rounded-full cursor-pointer px-8"
             >
-              <h1 class="text-sm text-[#555] font-medium">Check In</h1>
-              <p class="text-gray-500 text-sm">Add dates</p>
+              <h1 class="text-sm leading-[1] text-[#555] font-bold">
+                Check In
+              </h1>
+              <p class="text-gray-500 text-[13px]">Add dates</p>
             </div>
             <div class="h-8 w-px bg-gray-300 group-hover:hidden"></div>
           </div>
@@ -160,26 +165,29 @@
           <!-- Item 3 -->
           <div class="relative flex items-center group">
             <div
-              class="rounded pr-16 hover:bg-gray-200 hover:rounded-full p-2 cursor-pointer px-8"
+              class="rounded pr-16 hover:bg-gray-200 hover:rounded-full p-[15px] cursor-pointer px-8"
             >
-              <h1 class="text-sm text-[#555] font-medium">Check out</h1>
-              <p class="text-gray-500 text-sm">Add dates</p>
+              <h1 class="text-sm leading-[1] text-[#555] font-bold">
+                Check out
+              </h1>
+              <p class="text-gray-500 text-[13px]">Add dates</p>
             </div>
           </div>
 
           <!-- Item 4 -->
           <div class="relative flex items-center group">
             <div class="h-8 w-px bg-gray-300 group-hover:hidden"></div>
+
             <div
-              class="rounded pr-40 hover:rounded-full hover:bg-gray-200 p-2 cursor-pointer px-8"
+              class="rounded pr-48 hover:rounded-full hover:bg-gray-200 p-[15px] cursor-pointer pl-6"
             >
-              <h1 class="text-sm text-[#555] font-medium">Who</h1>
-              <p class="text-gray-500 text-sm">Add guests</p>
+              <h1 class="text-sm leading-[1] text-[#555] font-bold">Who</h1>
+              <p class="text-gray-500 text-[13px]">Add guests</p>
             </div>
           </div>
           <!-- Search Icon -->
           <div
-            class="rounded absolute right-0 top-1 pr-2 flex justify-center items-center"
+            class="rounded absolute right-0 top-2 pr-2 flex justify-center items-center"
           >
             <ion-icon
               class="text-8 text-white items-center cursor-pointer bg-red-600 p-4 border rounded-full w-4 h-4 hover:bg-rose-700"
@@ -192,6 +200,1109 @@
 
     <!-- navbar -->
     <!-- Search bar -->
+    <div
+      class="wrapper flex justify-between mt-8 px-8 hover:font-bold font-[Roboto] w-full hover:cursor-pointer sm:hidden md:flex lg:flex"
+    >
+      <div class="item pr-4 hidden lg:block text-center group">
+        <ion-icon
+          name="ticket-outline"
+          class="text-2xl text-[#666] group-hover:text-black"
+        ></ion-icon>
+        <h1
+          class="font-semibold text-xs text-[#111] border-b-2 border-transparent pb-2 group-hover:border-black group-hover:text-black"
+        >
+          Icons
+        </h1>
+      </div>
+      <div
+        class="item px-4 hidden hover:text-black lg:block text-center hover:border-b-2 pb-2 group"
+      >
+        <ion-icon
+          name="bed-outline"
+          class="text-2xl text-[#666] group-hover:text-black"
+        ></ion-icon>
+        <h1 class="font-medium text-xs group-hover:text-black text-[#666]">
+          Rooms
+        </h1>
+      </div>
+      <div
+        class="item px-4 hidden hover:text-black lg:block text-center hover:border-b-2 pb-2 group"
+      >
+        <ion-icon
+          name="logo-windows"
+          class="text-2xl text-[#666] group-hover:text-black"
+        ></ion-icon>
+        <h1 class="font-medium text-xs group-hover:text-black text-[#666]">
+          Amazing Views
+        </h1>
+      </div>
+      <div
+        class="item px-4 hidden hover:text-black lg:block text-center hover:border-b-2 pb-2 group"
+      >
+        <ion-icon
+          name="business-outline"
+          class="text-2xl text-[#666] group-hover:text-black"
+        ></ion-icon>
+        <h1 class="font-medium text-xs group-hover:text-black text-[#666]">
+          Top Cities
+        </h1>
+      </div>
+      <div
+        class="item px-4 hidden hover:text-black lg:block text-center hover:border-b-2 pb-2 group"
+      >
+        <ion-icon
+          name="walk-outline"
+          class="text-2xl text-[#666] group-hover:text-black"
+        ></ion-icon>
+        <h1 class="font-medium text-xs group-hover:text-black text-[#666]">
+          Country side
+        </h1>
+      </div>
+      <div
+        class="item px-4 hidden hover:text-black lg:block text-center hover:border-b-2 pb-2 group"
+      >
+        <ion-icon
+          name="fast-food-outline"
+          class="text-2xl text-[#666] group-hover:text-black"
+        ></ion-icon>
+        <h1 class="font-medium text-xs group-hover:text-black text-[#666]">
+          Luxe
+        </h1>
+      </div>
+      <div
+        class="item px-4 hidden hover:text-black lg:block text-center hover:border-b-2 pb-2 group"
+      >
+        <ion-icon
+          name="business-outline"
+          class="text-2xl text-[#666] group-hover:text-black"
+        ></ion-icon>
+        <h1 class="font-medium text-xs group-hover:text-black text-[#666]">
+          Mansions
+        </h1>
+      </div>
+      <div
+        class="item px-4 hidden hover:text-black lg:block text-center hover:border-b-2 pb-2 group"
+      >
+        <ion-icon
+          name="happy-outline"
+          class="text-2xl text-[#666] group-hover:text-black"
+        ></ion-icon>
+        <h1 class="font-medium text-xs group-hover:text-black text-[#666]">
+          LakeFront
+        </h1>
+      </div>
+      <div
+        class="item px-4 hidden hover:text-black lg:block text-center hover:border-b-2 pb-2 group"
+      >
+        <ion-icon
+          name="fast-food-outline"
+          class="text-2xl text-[#666] group-hover:text-black"
+        ></ion-icon>
+        <h1 class="font-medium text-xs group-hover:text-black text-[#666]">
+          Bed and Breakfast
+        </h1>
+      </div>
+      <div
+        class="item px-4 hidden hover:text-black lg:block text-center hover:border-b-2 pb-2 group"
+      >
+        <ion-icon
+          name="rainy-outline"
+          class="text-2xl text-[#666] group-hover:text-black"
+        ></ion-icon>
+        <h1 class="font-medium text-xs group-hover:text-black text-[#666]">
+          Amazing Pools
+        </h1>
+      </div>
+      <div
+        class="item px-4 hidden hover:text-black lg:block text-center hover:border-b-2 pb-2 group"
+      >
+        <ion-icon
+          name="home-outline"
+          class="text-2xl text-[#666] group-hover:text-black"
+        ></ion-icon>
+        <h1 class="font-medium text-xs group-hover:text-black text-[#666]">
+          Cabins
+        </h1>
+      </div>
+      <div
+        class="item px-4 hidden hover:text-black lg:block text-center hover:border-b-2 pb-2 group"
+      >
+        <ion-icon
+          name="leaf-outline"
+          class="text-2xl text-[#666] group-hover:text-black"
+        ></ion-icon>
+        <h1 class="font-medium text-xs group-hover:text-black text-[#666]">
+          Farms
+        </h1>
+      </div>
+      <div
+        class="item px-4 hidden hover:text-black lg:block text-center hover:border-b-2 pb-2 group"
+      >
+        <ion-icon
+          name="water-outline"
+          class="text-2xl text-[#666] group-hover:text-black"
+        ></ion-icon>
+        <h1 class="font-medium text-xs group-hover:text-black text-[#666]">
+          Islands
+        </h1>
+      </div>
+
+      <div class="item px-2 hidden lg:block text-center relative">
+        <ion-icon
+          name="chevron-forward-circle-outline"
+          class="text-4xl text-[#666]"
+        ></ion-icon>
+      </div>
+    </div>
+
+    <!-- Search bar -->
+    <!-- Card section -->
+    <div class="flex justify-center">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 max-w-full mx-4 sm:mx-8 md:mx-12 lg:mx-8 mt-4 gap-4 sm:gap-6 md:gap-8 lg:gap-8 xl:gap-8 font-[Roboto]"
+      >
+
+        <div class="box1 leading-tight relative group">
+  
+          <img
+            id="image-box"
+            src="icons/room.webp"
+            class="h-72 object-cover w-full rounded-lg transition-all duration-500 ease-in-out"
+            alt="Room Image"
+          />
+          <h2 class="room mt-2 font-[Roboto] font-medium">
+            Stay in Prince's Purple Rain house
+          </h2>
+          <p class="text-slate-500">Hosted By Wendy and Lisa</p>
+          <h2 class="coming font-[Roboto] font-medium">Coming September</h2>
+
+          <!-- Left Button (hidden and appeared when the index of image is greater than 0 ) -->
+          <div
+            id="left-button"
+            class="left-button opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 absolute top-28 left-0 z-[1] text-xl bg-gray-300 p-2 w-8 h-8 mt-4 ml-4 text-black flex justify-center items-center rounded-full transition-all duration-200 ease-in-out cursor-pointer"
+            onclick="previousImage()"
+            style="display: none"
+          >
+            &lt;
+          </div>
+
+          <!-- Right Button -->
+          <div
+            id="right-button"
+            class="right-button opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 absolute top-28 right-0 z-[1] text-xl bg-gray-300 p-2 w-8 h-8 mt-4 mr-4 text-black flex justify-center items-center rounded-full transition-all duration-200 ease-in-out cursor-pointer"
+            onclick="nextImage()"
+          >
+            &gt;
+          </div>
+        </div>
+
+        <div class="box2 leading-tight relative group">
+          <img
+            src="icons/doja-cat.jpeg"
+            class="h-72 object-cover w-full rounded-lg"
+            alt=""
+          />
+          <h2 class="room mt-2 font-[Roboto] font-medium">
+            Join a living room session with Doja
+          </h2>
+          <p class="text-slate-500">Hosted By Doja Cat</p>
+          <h2 class="coming font-[Roboto] font-medium">Coming October</h2>
+          <div
+            class="hover_button opacity-0 group-hover:opacity-100 group-hover:cursor-pointer scale-90 group-hover:scale-100 absolute top-28 right-0 z-[1] text-xl bg-gray-300 p-2 w-8 h-8 mt-4 mr-4 text-black flex justify-center items-center rounded-full transition-all duration-200 ease-in-out"
+          >
+            <div>&gt;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card section -->
+    <!-- Past experiences -->
+    <h1 class="px-8 mt-4 font-medium text-3xl font-[Roboto]">
+      Past experiences
+    </h1>
+    <div class="flex justify-center">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 max-w-full mx-4 sm:mx-8 md:mx-12 lg:mx-8 mt-8 gap-4 sm:gap-6 md:gap-8 lg:gap-8 xl:gap-8 font-[Roboto]"
+      >
+        <div class="box3 relative leading-tight hover:cursor-pointer group">
+          <img
+            src="icons/house.webp"
+            class="h-72 object-cover w-full rounded-lg"
+            alt=""
+          />
+          <h2 class="room mt-2 font-[Roboto] font-medium">
+            Sleepover at Polly Pocket’s Compact
+          </h2>
+          <p class="text-slate-500">Hosted by Polly Pocket</p>
+          <h2 class="coming font-[Roboto] font-medium">Sold out</h2>
+          <div
+            class="icon absolute top-0 right-0 z-[1] text-xl text-black flex justify-center items-center hover:text-gray-500 transition duration-300 hover:bg-white bg-gray-300 mt-4 mr-4 rounded-3xl w-8 h-8"
+          >
+            <i class="bx bxs-download"></i>
+          </div>
+          <div
+            class="hover_button opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 absolute top-28 right-0 z-[1] text-xl bg-gray-300 p-2 w-8 h-8 mt-4 mr-4 text-black flex justify-center items-center rounded-full transition-all duration-200 ease-in-out"
+          >
+            <div>&gt;</div>
+          </div>
+          <div
+            class="dots absolute flex justify-center items-center top-[73%] xl:top-[72%] left-1/2 transform -translate-x-1/2 space-x-2"
+          >
+            <div class="dot1 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot2 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot3 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot4 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot5 w-2 h-2 bg-gray-300 rounded-full"></div>
+          </div>
+        </div>
+
+        <div class="box4 relative leading-tight hover:cursor-pointer group">
+          <img
+            src="icons/clothes.webp"
+            class="h-72 object-cover w-full rounded-lg"
+            alt=""
+          />
+          <h2 class="room mt-2 font-[Roboto] font-medium">
+            Playdate at Polly Pocket’s Compact
+          </h2>
+          <p class="text-slate-500">Hosted By Polly Pocket</p>
+          <h2 class="coming font-[Roboto] font-medium">Sold out</h2>
+          <div
+            class="icon absolute top-0 right-0 z-[1] text-xl text-black flex justify-center items-center hover:text-gray-500 transition duration-300 hover:bg-white bg-gray-300 mt-4 mr-4 rounded-3xl w-8 h-8 right-0"
+          >
+            <i class="bx bxs-download"></i>
+          </div>
+          <div
+            class="hover_button opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 absolute top-28 right-0 z-[1] text-xl bg-gray-300 p-2 w-8 h-8 mt-4 mr-4 text-black flex justify-center items-center rounded-full transition-all duration-200 ease-in-out"
+          >
+            <div>&gt;</div>
+          </div>
+          <div
+            class="dots absolute flex justify-center items-center top-[73%] xl:top-[72%] left-1/2 transform -translate-x-1/2 space-x-2"
+          >
+            <div class="dot1 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot2 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot3 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot4 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot5 w-2 h-2 bg-gray-300 rounded-full"></div>
+          </div>
+        </div>
+        <div class="box5 relative leading-tight hover:cursor-pointer group">
+          <img
+            src="icons/kevin-hart.webp"
+            class="h-72 object-cover w-full rounded-lg"
+            alt=""
+          />
+          <h2 class="room mt-2 font-[Roboto] font-medium">
+            Go Vip with Kevin-Hart
+          </h2>
+          <p class="text-slate-500">Hosted By Kevin-Hart</p>
+          <h2 class="coming font-[Roboto] font-medium">Sold out</h2>
+          <div
+            class="icon absolute top-0 right-0 z-[1] text-xl text-black flex justify-center items-center hover:text-gray-500 transition duration-300 hover:bg-white bg-gray-300 mt-4 mr-4 rounded-3xl w-8 h-8 right-0"
+          >
+            <i class="bx bxs-download"></i>
+          </div>
+          <div
+            class="hover_button opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 absolute top-28 right-0 z-[1] text-xl bg-gray-300 p-2 w-8 h-8 mt-4 mr-4 text-black flex justify-center items-center rounded-full transition-all duration-200 ease-in-out"
+          >
+            <div>&gt;</div>
+          </div>
+          <div
+            class="dots absolute flex justify-center items-center top-[73%] xl:top-[72%] left-1/2 transform -translate-x-1/2 space-x-2"
+          >
+            <div class="dot1 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot2 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot3 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot4 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot5 w-2 h-2 bg-gray-300 rounded-full"></div>
+          </div>
+        </div>
+        <div class="box6 relative leading-tight hover:cursor-pointer group">
+          <img
+            src="icons/ufo.webp"
+            class="h-72 object-cover w-full rounded-lg"
+            alt=""
+          />
+          <h2 class="room mt-2 font-[Roboto] font-medium">
+            Train at the X-mansion
+          </h2>
+          <p class="text-slate-500">Hosted By Wendy and Lisa</p>
+          <h2 class="coming font-[Roboto] font-medium">Sold out</h2>
+          <div
+            class="icon absolute top-0 right-0 z-[1] text-xl text-black flex justify-center items-center hover:text-gray-500 transition duration-300 hover:bg-white bg-gray-300 mt-4 mr-4 rounded-3xl w-8 h-8 right-0"
+          >
+            <i class="bx bxs-download"></i>
+          </div>
+          <div
+            class="hover_button opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 absolute top-28 right-0 z-[1] text-xl bg-gray-300 p-2 w-8 h-8 mt-4 mr-4 text-black flex justify-center items-center rounded-full transition-all duration-200 ease-in-out"
+          >
+            <div>&gt;</div>
+          </div>
+          <div
+            class="dots absolute flex justify-center items-center top-[73%] xl:top-[72%] left-1/2 transform -translate-x-1/2 space-x-2"
+          >
+            <div class="dot1 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot2 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot3 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot4 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot5 w-2 h-2 bg-gray-300 rounded-full"></div>
+          </div>
+        </div>
+        <div class="box7 relative leading-tight hover:cursor-pointer group">
+          <img
+            src="icons/star.webp"
+            class="h-72 object-cover w-full rounded-lg"
+            alt=""
+          />
+          <h2 class="room mt-2 font-[Roboto] font-medium">
+            Live like Bollywood star Jhanvi Kapoor
+          </h2>
+          <p class="text-slate-500">Hosted By Jhanvi Kapoor</p>
+          <h2 class="coming font-[Roboto] font-medium">Sold out</h2>
+          <div
+            class="icon absolute top-0 right-0 z-[1] text-xl text-black flex justify-center items-center hover:text-gray-500 transition duration-300 hover:bg-white bg-gray-300 mt-4 mr-4 rounded-3xl w-8 h-8 right-0"
+          >
+            <i class="bx bxs-download"></i>
+          </div>
+          <div
+            class="hover_button opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 absolute top-28 right-0 z-[1] text-xl bg-gray-300 p-2 w-8 h-8 mt-4 mr-4 text-black flex justify-center items-center rounded-full transition-all duration-200 ease-in-out"
+          >
+            <div>&gt;</div>
+          </div>
+          <div
+            class="dots absolute flex justify-center items-center top-[73%] xl:top-[72%] left-1/2 transform -translate-x-1/2 space-x-2"
+          >
+            <div class="dot1 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot2 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot3 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot4 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot5 w-2 h-2 bg-gray-300 rounded-full"></div>
+          </div>
+        </div>
+        <div class="box8 relative leading-tight hover:cursor-pointer group">
+          <img
+            src="icons/seeview.webp"
+            class="h-72 object-cover w-full rounded-lg"
+            alt=""
+          />
+          <h2 class="room mt-2 font-[Roboto] font-medium">
+            Open the Olympic games at Musee d'Orsay
+          </h2>
+          <p class="text-slate-500">Hosted by Mathieu Lehanneur</p>
+          <h2 class="coming font-[Roboto] font-medium">Sold out</h2>
+          <div
+            class="icon absolute top-0 right-0 z-[1] text-xl text-black flex justify-center items-center hover:text-gray-500 transition duration-300 hover:bg-white bg-gray-300 mt-4 mr-4 rounded-3xl w-8 h-8 right-0"
+          >
+            <i class="bx bxs-download"></i>
+          </div>
+          <div
+            class="hover_button opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 absolute top-28 right-0 z-[1] text-xl bg-gray-300 p-2 w-8 h-8 mt-4 mr-4 text-black flex justify-center items-center rounded-full transition-all duration-200 ease-in-out"
+          >
+            <div>&gt;</div>
+          </div>
+          <div
+            class="dots absolute flex justify-center items-center top-[73%] xl:top-[72%] left-1/2 transform -translate-x-1/2 space-x-2"
+          >
+            <div class="dot1 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot2 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot3 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot4 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot5 w-2 h-2 bg-gray-300 rounded-full"></div>
+          </div>
+        </div>
+        <div class="box9 relative leading-tight hover:cursor-pointer group">
+          <img
+            src="icons/clockroom.webp"
+            class="h-72 object-cover w-full rounded-lg"
+            alt=""
+          />
+          <h2 class="room mt-2 font-[Roboto] font-medium">
+            Wake up in the Musee d'Orsay
+          </h2>
+          <p class="text-slate-500">Hosted by Mathieu Lehanneur</p>
+          <h2 class="coming font-[Roboto] font-medium">Sold out</h2>
+          <div
+            class="icon absolute top-0 right-0 z-[1] text-xl text-black flex justify-center items-center hover:text-gray-500 transition duration-300 hover:bg-white bg-gray-300 mt-4 mr-4 rounded-3xl w-8 h-8 right-0"
+          >
+            <i class="bx bxs-download"></i>
+          </div>
+          <div
+            class="hover_button opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 absolute top-28 right-0 z-[1] text-xl bg-gray-300 p-2 w-8 h-8 mt-4 mr-4 text-black flex justify-center items-center rounded-full transition-all duration-200 ease-in-out"
+          >
+            <div>&gt;</div>
+          </div>
+          <div
+            class="dots absolute flex justify-center items-center top-[73%] xl:top-[72%] left-1/2 transform -translate-x-1/2 space-x-2"
+          >
+            <div class="dot1 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot2 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot3 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot4 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot5 w-2 h-2 bg-gray-300 rounded-full"></div>
+          </div>
+        </div>
+        <div class="box10 relative leading-tight hover:cursor-pointer group">
+          <img
+            src="icons/core.webp"
+            class="h-72 object-cover w-full rounded-lg"
+            alt=""
+          />
+          <h2 class="room mt-2 font-[Roboto] font-medium">
+            Make core memories with Inside Out 2
+          </h2>
+          <p class="text-slate-800">Hosted by Joy</p>
+          <h2 class="coming font-[Roboto] font-medium">Sold out</h2>
+          <div
+            class="icon absolute top-0 right-0 z-[1] text-xl text-black flex justify-center items-center hover:text-gray-500 transition duration-300 hover:bg-white bg-gray-300 mt-4 mr-4 rounded-3xl w-8 h-8 right-0"
+          >
+            <i class="bx bxs-download"></i>
+          </div>
+          <div
+            class="hover_button opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 absolute top-28 right-0 z-[1] text-xl bg-gray-300 p-2 w-8 h-8 mt-4 mr-4 text-black flex justify-center items-center rounded-full transition-all duration-200 ease-in-out"
+          >
+            <div>&gt;</div>
+          </div>
+          <div
+            class="dots absolute flex justify-center items-center top-[73%] xl:top-[72%] left-1/2 transform -translate-x-1/2 space-x-2"
+          >
+            <div class="dot1 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot2 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot3 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot4 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot5 w-2 h-2 bg-gray-300 rounded-full"></div>
+          </div>
+        </div>
+        <div class="box11 relative leading-tight hover:cursor-pointer group">
+          <img
+            src="icons/robto.jpeg"
+            class="h-72 object-cover w-full rounded-lg"
+            alt=""
+          />
+          <h2 class="room mt-2 font-[Roboto] font-medium">
+            Design your Incredibles Supersuit
+          </h2>
+          <p class="text-slate-500">Hosted by Edna Mode</p>
+          <h2 class="coming font-[Roboto] font-medium">Sold out</h2>
+          <div
+            class="icon absolute top-0 right-0 z-[1] text-xl text-black flex justify-center items-center hover:text-gray-500 transition duration-300 hover:bg-white bg-gray-300 mt-4 mr-4 rounded-3xl w-8 h-8 right-0"
+          >
+            <i class="bx bxs-download"></i>
+          </div>
+          <div
+            class="hover_button opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 absolute top-28 right-0 z-[1] text-xl bg-gray-300 p-2 w-8 h-8 mt-4 mr-4 text-black flex justify-center items-center rounded-full transition-all duration-200 ease-in-out"
+          >
+            <div>&gt;</div>
+          </div>
+          <div
+            class="dots absolute flex justify-center items-center top-[73%] xl:top-[72%] left-1/2 transform -translate-x-1/2 space-x-2"
+          >
+            <div class="dot1 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot2 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot3 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot4 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot5 w-2 h-2 bg-gray-300 rounded-full"></div>
+          </div>
+        </div>
+        <div class="box12 relative leading-tight hover:cursor-pointer group">
+          <img
+            src="icons/feid.webp"
+            class="h-72 object-cover w-full rounded-lg"
+            alt=""
+          />
+          <h2 class="room mt-2 font-[Roboto] font-medium">
+            Go on tour with Feid
+          </h2>
+          <p class="text-slate-500">Hosted by Feid</p>
+          <h2 class="coming font-[Roboto] font-medium">Sold out</h2>
+          <div
+            class="icon absolute top-0 right-0 z-[1] text-xl text-black flex justify-center items-center hover:text-gray-500 transition duration-300 hover:bg-white bg-gray-300 mt-4 mr-4 rounded-3xl w-8 h-8 right-0"
+          >
+            <i class="bx bxs-download"></i>
+          </div>
+          <div
+            class="hover_button opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 absolute top-28 right-0 z-[1] text-xl bg-gray-300 p-2 w-8 h-8 mt-4 mr-4 text-black flex justify-center items-center rounded-full transition-all duration-200 ease-in-out"
+          >
+            <div>&gt;</div>
+          </div>
+          <div
+            class="dots absolute flex justify-center items-center top-[73%] xl:top-[72%] left-1/2 transform -translate-x-1/2 space-x-2"
+          >
+            <div class="dot1 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot2 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot3 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot4 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot5 w-2 h-2 bg-gray-300 rounded-full"></div>
+          </div>
+        </div>
+        <div class="box13 relative leading-tight hover:cursor-pointer group">
+          <img
+            src="icons/khaby-lame.webp"
+            class="h-72 object-cover w-full rounded-lg"
+            alt=""
+          />
+          <h2 class="room mt-2 font-[Roboto] font-medium">
+            Game with Khaby Lame
+          </h2>
+          <p class="text-slate-500">Hosted by Feid</p>
+          <h2 class="coming font-[Roboto] font-medium">Sold out</h2>
+          <div
+            class="icon absolute top-0 right-0 z-[1] text-xl text-black flex justify-center items-center hover:text-gray-500 transition duration-300 hover:bg-white bg-gray-300 mt-4 mr-4 rounded-3xl w-8 h-8 right-0"
+          >
+            <i class="bx bxs-download"></i>
+          </div>
+          <div
+            class="hover_button opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 absolute top-28 right-0 z-[1] text-xl bg-gray-300 p-2 w-8 h-8 mt-4 mr-4 text-black flex justify-center items-center rounded-full transition-all duration-200 ease-in-out"
+          >
+            <div>&gt;</div>
+          </div>
+          <div
+            class="dots absolute flex justify-center items-center top-[73%] xl:top-[72%] left-1/2 transform -translate-x-1/2 space-x-2"
+          >
+            <div class="dot1 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot2 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot3 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot4 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot5 w-2 h-2 bg-gray-300 rounded-full"></div>
+          </div>
+        </div>
+        <div class="box14 relative leading-tight hover:cursor-pointer group">
+          <img
+            src="icons/x-mansion.webp"
+            class="h-72 object-cover w-full rounded-lg"
+            alt=""
+          />
+          <h2 class="room mt-2 font-[Roboto] font-medium">
+            Crash at the X-Mansion
+          </h2>
+          <p class="text-slate-500">Hosted by Jubilee</p>
+          <h2 class="coming font-[Roboto] font-medium">Sold out</h2>
+          <div
+            class="icon absolute top-0 right-0 z-[1] text-xl text-black flex justify-center items-center hover:text-gray-500 transition duration-300 hover:bg-white bg-gray-300 mt-4 mr-4 rounded-3xl w-8 h-8 right-0"
+          >
+            <i class="bx bxs-download"></i>
+          </div>
+          <div
+            class="hover_button opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 absolute top-28 right-0 z-[1] text-xl bg-gray-300 p-2 w-8 h-8 mt-4 mr-4 text-black flex justify-center items-center rounded-full transition-all duration-200 ease-in-out"
+          >
+            <div>&gt;</div>
+          </div>
+          <div
+            class="dots absolute flex justify-center items-center top-[73%] xl:top-[72%] left-1/2 transform -translate-x-1/2 space-x-2"
+          >
+            <div class="dot1 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot2 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot3 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot4 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot5 w-2 h-2 bg-gray-300 rounded-full"></div>
+          </div>
+        </div>
+        <div class="box15 relative leading-tight hover:cursor-pointer group">
+          <img
+            src="icons/ferrari.jfif"
+            class="h-72 object-cover w-full rounded-lg"
+            alt=""
+          />
+          <h2 class="room mt-2 font-[Roboto] font-medium">
+            Spend the night in the Ferrari Museum
+          </h2>
+          <p class="text-slate-500">Hosted by Marc Gené</p>
+          <h2 class="coming font-[Roboto] font-medium">Sold out</h2>
+          <div
+            class="icon absolute top-0 right-0 z-[1] text-xl text-black flex justify-center items-center hover:text-gray-500 transition duration-300 hover:bg-white bg-gray-300 mt-4 mr-4 rounded-3xl w-8 h-8 right-0"
+          >
+            <i class="bx bxs-download"></i>
+          </div>
+          <div
+            class="hover_button opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 absolute top-28 right-0 z-[1] text-xl bg-gray-300 p-2 w-8 h-8 mt-4 mr-4 text-black flex justify-center items-center rounded-full transition-all duration-200 ease-in-out"
+          >
+            <div>&gt;</div>
+          </div>
+          <div
+            class="dots absolute flex justify-center items-center top-[73%] xl:top-[72%] left-1/2 transform -translate-x-1/2 space-x-2"
+          >
+            <div class="dot1 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot2 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot3 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot4 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot5 w-2 h-2 bg-gray-300 rounded-full"></div>
+          </div>
+        </div>
+        <div class="box16 relative leading-tight hover:cursor-pointer group">
+          <img
+            src="icons/ballon.webp"
+            class="h-72 object-cover w-full rounded-lg"
+            alt=""
+          />
+          <h2 class="room mt-2 font-[Roboto] font-medium">
+            Drift off in the Up house
+          </h2>
+          <p class="text-slate-500">Hosted by Carl Fredricksen</p>
+          <h2 class="coming font-[Roboto] font-medium">Sold out</h2>
+          <div
+            class="icon absolute top-0 right-0 z-[1] text-xl text-black flex justify-center items-center hover:text-gray-500 transition duration-300 hover:bg-white bg-gray-300 mt-4 mr-4 rounded-3xl w-8 h-8 right-0"
+          >
+            <i class="bx bxs-download"></i>
+          </div>
+          <div
+            class="hover_button opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 absolute top-28 right-0 z-[1] text-xl bg-gray-300 p-2 w-8 h-8 mt-4 mr-4 text-black flex justify-center items-center rounded-full transition-all duration-200 ease-in-out"
+          >
+            <div>&gt;</div>
+          </div>
+          <div
+            class="dots absolute flex justify-center items-center top-[73%] xl:top-[72%] left-1/2 transform -translate-x-1/2 space-x-2"
+          >
+            <div class="dot1 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot2 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot3 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot4 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot5 w-2 h-2 bg-gray-300 rounded-full"></div>
+          </div>
+        </div>
+        <div class="box17 relative leading-tight hover:cursor-pointer group">
+          <img
+            src="icons/tree.webp"
+            class="h-72 object-cover w-full rounded-lg"
+            alt=""
+          />
+          <h2 class="room mt-2 font-[Roboto] font-medium">Shrek's Swamp</h2>
+          <p class="text-slate-500">Hosted by Donkey</p>
+          <h2 class="coming font-[Roboto] font-medium">Sold out</h2>
+          <div
+            class="icon absolute top-0 right-0 z-[1] text-xl text-black flex justify-center items-center hover:text-gray-500 transition duration-300 hover:bg-white bg-gray-300 mt-4 mr-4 rounded-3xl w-8 h-8 right-0"
+          >
+            <i class="bx bxs-download"></i>
+          </div>
+          <div
+            class="hover_button opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 absolute top-28 right-0 z-[1] text-xl bg-gray-300 p-2 w-8 h-8 mt-4 mr-4 text-black flex justify-center items-center rounded-full transition-all duration-200 ease-in-out"
+          >
+            <div>&gt;</div>
+          </div>
+          <div
+            class="dots absolute flex justify-center items-center top-[73%] xl:top-[72%] left-1/2 transform -translate-x-1/2 space-x-2"
+          >
+            <div class="dot1 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot2 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot3 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot4 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot5 w-2 h-2 bg-gray-300 rounded-full"></div>
+          </div>
+        </div>
+        <div class="box18 relative leading-tight hover:cursor-pointer group">
+          <img
+            src="icons/barbiehouse.webp"
+            class="h-72 object-cover w-full rounded-lg"
+            alt=""
+          />
+          <h2 class="room mt-2 font-[Roboto] font-medium">
+            Barbie’s Malibu DreamHouse, Ken’s Way
+          </h2>
+          <p class="text-slate-500">Hosted by Ken</p>
+          <h2 class="coming font-[Roboto] font-medium">Sold out</h2>
+          <div
+            class="icon absolute top-0 right-0 z-[1] text-xl text-black flex justify-center items-center hover:text-gray-500 transition duration-300 hover:bg-white bg-gray-300 mt-4 mr-4 rounded-3xl w-8 h-8 right-0"
+          >
+            <i class="bx bxs-download"></i>
+          </div>
+          <div
+            class="hover_button opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 absolute top-28 right-0 z-[1] text-xl bg-gray-300 p-2 w-8 h-8 mt-4 mr-4 text-black flex justify-center items-center rounded-full transition-all duration-200 ease-in-out"
+          >
+            <div>&gt;</div>
+          </div>
+          <div
+            class="dots absolute flex justify-center items-center top-[73%] xl:top-[72%] left-1/2 transform -translate-x-1/2 space-x-2"
+          >
+            <div class="dot1 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot2 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot3 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot4 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot5 w-2 h-2 bg-gray-300 rounded-full"></div>
+          </div>
+        </div>
+        <div class="box19 relative leading-tight hover:cursor-pointer group">
+          <img
+            src="icons/home.webp"
+            class="h-72 object-cover w-full rounded-lg"
+            alt=""
+          />
+          <h2 class="room mt-2 font-[Roboto] font-medium">
+            Ted Lasso’s Favorite Pub
+          </h2>
+          <p class="text-slate-500">Hosted by Mae</p>
+          <h2 class="coming font-[Roboto] font-medium">Sold out</h2>
+          <div
+            class="icon absolute top-0 right-0 z-[1] text-xl text-black flex justify-center items-center hover:text-gray-500 transition duration-300 hover:bg-white bg-gray-300 mt-4 mr-4 rounded-3xl w-8 h-8 right-0"
+          >
+            <i class="bx bxs-download"></i>
+          </div>
+          <div
+            class="hover_button opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 absolute top-28 right-0 z-[1] text-xl bg-gray-300 p-2 w-8 h-8 mt-4 mr-4 text-black flex justify-center items-center rounded-full transition-all duration-200 ease-in-out"
+          >
+            <div>&gt;</div>
+          </div>
+          <div
+            class="dots absolute flex justify-center items-center top-[73%] xl:top-[72%] left-1/2 transform -translate-x-1/2 space-x-2"
+          >
+            <div class="dot1 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot2 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot3 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot4 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot5 w-2 h-2 bg-gray-300 rounded-full"></div>
+          </div>
+        </div>
+        <div class="box20 relative leading-tight hover:cursor-pointer group">
+          <img
+            src="icons/sitting-area.webp"
+            class="h-72 object-cover w-full rounded-lg"
+            alt=""
+          />
+          <h2 class="room mt-2 font-[Roboto] font-medium">
+            Houseplant Retreat
+          </h2>
+          <p class="text-slate-500">Hosted by Seth Rogen</p>
+          <h2 class="coming font-[Roboto] font-medium">Sold out</h2>
+          <div
+            class="icon absolute top-0 right-0 z-[1] text-xl text-black flex justify-center items-center hover:text-gray-500 transition duration-300 hover:bg-white bg-gray-300 mt-4 mr-4 rounded-3xl w-8 h-8 right-0"
+          >
+            <i class="bx bxs-download"></i>
+          </div>
+          <div
+            class="hover_button opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 absolute top-28 right-0 z-[1] text-xl bg-gray-300 p-2 w-8 h-8 mt-4 mr-4 text-black flex justify-center items-center rounded-full transition-all duration-200 ease-in-out"
+          >
+            <div>&gt;</div>
+          </div>
+          <div
+            class="dots absolute flex justify-center items-center top-[73%] xl:top-[72%] left-1/2 transform -translate-x-1/2 space-x-2"
+          >
+            <div class="dot1 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot2 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot3 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot4 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot5 w-2 h-2 bg-gray-300 rounded-full"></div>
+          </div>
+        </div>
+        <div class="box21 relative leading-tight hover:cursor-pointer group">
+          <img
+            src="icons/homealone.jpeg"
+            class="h-72 object-cover w-full rounded-lg"
+            alt=""
+          />
+          <h2 class="room mt-2 font-[Roboto] font-medium">
+            Home Alone Holiday
+          </h2>
+          <p class="text-slate-500">Hosted by Buzz</p>
+          <h2 class="coming font-[Roboto] font-medium">Sold out</h2>
+          <div
+            class="icon absolute top-0 right-0 z-[1] text-xl text-black flex justify-center items-center hover:text-gray-500 transition duration-300 hover:bg-white bg-gray-300 mt-4 mr-4 rounded-3xl w-8 h-8 right-0"
+          >
+            <i class="bx bxs-download"></i>
+          </div>
+          <div
+            class="hover_button opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 absolute top-28 right-0 z-[1] text-xl bg-gray-300 p-2 w-8 h-8 mt-4 mr-4 text-black flex justify-center items-center rounded-full transition-all duration-200 ease-in-out"
+          >
+            <div>&gt;</div>
+          </div>
+          <div
+            class="dots absolute flex justify-center items-center top-[73%] xl:top-[72%] left-1/2 transform -translate-x-1/2 space-x-2"
+          >
+            <div class="dot1 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot2 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot3 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot4 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot5 w-2 h-2 bg-gray-300 rounded-full"></div>
+          </div>
+        </div>
+        <div class="box22 relative leading-tight hover:cursor-pointer group">
+          <img
+            src="icons/blockbuster.webp"
+            class="h-72 object-cover w-full rounded-lg"
+            alt=""
+          />
+          <h2 class="room mt-2 font-[Roboto] font-medium">
+            The Last Blockbuster
+          </h2>
+          <p class="text-slate-500">Hosted by Sandi</p>
+          <h2 class="coming font-[Roboto] font-medium">Sold out</h2>
+          <div
+            class="icon absolute top-0 right-0 z-[1] text-xl text-black flex justify-center items-center hover:text-gray-500 transition duration-300 hover:bg-white bg-gray-300 mt-4 mr-4 rounded-3xl w-8 h-8 right-0"
+          >
+            <i class="bx bxs-download"></i>
+          </div>
+          <div
+            class="hover_button opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 absolute top-28 right-0 z-[1] text-xl bg-gray-300 p-2 w-8 h-8 mt-4 mr-4 text-black flex justify-center items-center rounded-full transition-all duration-200 ease-in-out"
+          >
+            <div>&gt;</div>
+          </div>
+          <div
+            class="dots absolute flex justify-center items-center top-[73%] xl:top-[72%] left-1/2 transform -translate-x-1/2 space-x-2"
+          >
+            <div class="dot1 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot2 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot3 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot4 w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="dot5 w-2 h-2 bg-gray-300 rounded-full"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Past experiences -->
+    <!-- Inspiration section -->
+    <div class="wrapper_cover bg-gray-100">
+      <h3
+        class="px-20 mt-8 pt-16 font-medium text-xl lg:text-2xl font-[Roboto]"
+      >
+        Inspiration for future getaways
+      </h3>
+      <div class="wrapper flex mt-8 px-16 hover:font-bold hover:cursor-pointer">
+        <div class="item px-4 text-center border-b-2 border-gray-600 pb-2">
+          <h1 class="font-bold text-24 text-gray-700">Popular</h1>
+        </div>
+        <div class="item px-4 text-center border-b-2 pb-2">
+          <h1 class="font-medium text-24 text-gray-500">Beach</h1>
+        </div>
+        <div class="item px-4 text-center border-b-2 pb-2">
+          <h1 class="font-medium text-24 text-gray-500">Outdoors</h1>
+        </div>
+        <div class="item px-4 hidden lg:block text-center border-b-2 pb-2">
+          <h1 class="font-medium text-24 text-gray-500">Mountains</h1>
+        </div>
+        <div class="item px-4 hidden lg:block text-center border-b-2 pb-2">
+          <h1 class="font-medium text-24 text-gray-500">Arts & Culture</h1>
+        </div>
+        <div class="item px-4 hidden lg:block text-center border-b-2 pb-2">
+          <h1 class="font-medium text-24 text-gray-500">Unique stays</h1>
+        </div>
+        <div class="item px-4 hidden lg:block text-center border-b-2 pb-2">
+          <h1 class="font-medium text-24 text-gray-500">Categories</h1>
+        </div>
+        <div class="item px-4 hidden lg:block text-center border-b-2 pb-2">
+          <h1 class="font-medium text-24 text-gray-500">Things to do</h1>
+        </div>
+        <div class="item px-4 hidden lg:block text-center border-b-2 pb-2">
+          <h1 class="font-medium text-24 text-gray-500">
+            Travel tips & inspiration
+          </h1>
+        </div>
+        <div class="item px-4 text-center hidden lg:block border-b-2 pb-2">
+          <h1 class="font-medium text-24 text-gray-500">
+            Airbnb-friendly apartments
+          </h1>
+        </div>
+      </div>
+      <div class="grid">
+        <div
+          class="links grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 hover:cursor-pointer px-16 mt-8 gap-6 font-[Roboto]"
+        >
+          <div class="items1">
+            <h1 class="font-medium text-24">Canmore</h1>
+            <p class="text-gray-500">Condo rentals</p>
+          </div>
+          <div class="items2">
+            <h1 class="font-medium text-24">Benalmádena</h1>
+            <p class="text-gray-500">Beach house rentals</p>
+          </div>
+          <div class="items3">
+            <h1 class="font-medium text-24">Marbella</h1>
+            <p class="text-gray-500">Cottage rentals</p>
+          </div>
+          <div class="items4">
+            <h1 class="font-medium text-24">Mijas</h1>
+            <p class="text-gray-500">House rentals</p>
+          </div>
+          <div class="items5">
+            <h1 class="font-medium text-24">Prescott</h1>
+            <p class="text-gray-500">Cabin rentals</p>
+          </div>
+          <div class="items6">
+            <h1 class="font-medium text-24">Scottsdale</h1>
+            <p class="text-gray-500">House rentals</p>
+          </div>
+          <div class="items7">
+            <h1 class="font-medium text-24">Tucson</h1>
+            <p class="text-gray-500">Pet-friendly rentals</p>
+          </div>
+          <div class="items8">
+            <h1 class="font-medium text-24">Jasper</h1>
+            <p class="text-gray-500">Cabin rentals</p>
+          </div>
+          <div class="items9">
+            <h1 class="font-medium text-24">Mountain View</h1>
+            <p class="text-gray-500">Cabin rentals</p>
+          </div>
+          <div class="items10">
+            <h1 class="font-medium text-24">Devonport</h1>
+            <p class="text-gray-500">Cottage rentals</p>
+          </div>
+          <div class="item11">
+            <h1 class="font-medium text-24">Mallacoota</h1>
+            <p class="text-gray-500">Beach house rentals</p>
+          </div>
+          <div class="items12">
+            <h1 class="font-medium text-24">Ibiza</h1>
+            <p class="text-gray-500">Vactions rentals</p>
+          </div>
+          <div class="items13 hidden lg:block">
+            <h1 class="font-medium text-24">Anaheim</h1>
+            <p class="text-gray-500">House rentals</p>
+          </div>
+          <div class="items14 hidden lg:block">
+            <h1 class="font-medium text-24">Monterey</h1>
+            <p class="text-gray-500">Condo rentals</p>
+          </div>
+          <div class="items15 hidden lg:block">
+            <h1 class="font-medium text-24">Paso robles</h1>
+            <p class="text-gray-500">House rentals</p>
+          </div>
+          <div class="items16 hidden lg:block">
+            <h1 class="font-medium text-24">Santa Barbara</h1>
+            <p class="text-gray-500">Apartment rentals</p>
+          </div>
+          <div class="items17 hidden lg:block">
+            <h1 class="font-medium text-24">Sonoma</h1>
+            <p class="text-gray-500">Pet-friendly rentals</p>
+          </div>
+          <div class="items18 hidden lg:block">
+            <h1 class="font-medium text-24">
+              Showmore
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="border-b-2 mt-16"></div>
+
+      <!-- Inspiration section -->
+      <!-- Footer section -->
+      <div
+        class="boxer mt-8 bg-gray-100 list-none flex flex-col md:flex-row justify-between px-4 md:px-16"
+      >
+        <div class="box4 text-8 mb-8 border-b-2 md:mb-0">
+          <h1 class="Support px-2 text-20 mb-2 font-bold font-[Roboto]">
+            Support
+          </h1>
+          <li class="p-2 hover:cursor-pointer text-gray-700 hover:underline">
+            HelpCenter
+          </li>
+          <li class="p-2 hover:cursor-pointer text-gray-700 hover:underline">
+            Air-Cover
+          </li>
+          <li class="p-2 hover:cursor-pointer text-gray-700 hover:underline">
+            Anti-Discrimination
+          </li>
+          <li class="p-2 hover:cursor-pointer text-gray-700 hover:underline">
+            Disability support
+          </li>
+          <li class="p-2 hover:cursor-pointer text-gray-700 hover:underline">
+            Cancellation Options
+          </li>
+          <li class="p-2 hover:cursor-pointer text-gray-700 hover:underline">
+            Report neighborhood concern
+          </li>
+        </div>
+        <div class="box5 text-8 mb-8 border-b-2 md:mb-0">
+          <h1 class="Hosting px-2 text-20 mb-2 font-bold font-[Roboto]">
+            Hosting
+          </h1>
+          <li class="p-2 hover:cursor-pointer text-gray-700 hover:underline">
+            Airbnb your home
+          </li>
+          <li class="p-2 hover:cursor-pointer text-gray-700 hover:underline">
+            AirCover for Hosts
+          </li>
+          <li class="p-2 hover:cursor-pointer text-gray-700 hover:underline">
+            Hosting-Resources
+          </li>
+          <li class="p-2 hover:cursor-pointer text-gray-700 hover:underline">
+            Community Forum
+          </li>
+          <li class="p-2 hover:cursor-pointer text-gray-700 hover:underline">
+            Hosting responsibility
+          </li>
+          <li class="p-2 hover:cursor-pointer text-gray-700 hover:underline">
+            Airbnb-friendly apartments
+          </li>
+          <li class="p-2 hover:cursor-pointer text-gray-700 hover:underline">
+            Join a free Hosting class
+          </li>
+        </div>
+        <div class="box5 text-8 mb-8 border-b-2 md:mb-0">
+          <h1 class="Airbnb px-2 text-20 mb-2 font-bold font-[Roboto]">
+            Airbnb
+          </h1>
+          <li class="p-2 hover:cursor-pointer text-gray-700 hover:underline">
+            Newsroom
+          </li>
+          <li class="p-2 hover:cursor-pointer text-gray-700 hover:underline">
+            New features
+          </li>
+          <li class="p-2 hover:cursor-pointer text-gray-700 hover:underline">
+            Careers
+          </li>
+          <li class="p-2 hover:cursor-pointer text-gray-700 hover:underline">
+            Investors
+          </li>
+          <li class="p-2 hover:cursor-pointer text-gray-700 hover:underline">
+            Gift cards
+          </li>
+          <li class="p-2 hover:cursor-pointer text-gray-700 hover:underline">
+            Airbnb .org emergency stays
+          </li>
+        </div>
+      </div>
+    </div>
+    <!-- Footer section -->
+    <footer
+      class="bg-gray-100 flex py-4 flex-col md:flex-row border-t pt-4 px-4 md:px-16 h-auto"
+    >
+      <!-- English (US) $ USD (on top in mobile view) -->
+      <div
+        class="flex-1 flex justify-start md:justify-end items-center order-1 md:order-3"
+      >
+        <div class="right_side flex flex-row items-center">
+          <ion-icon class="text-2xl px-2" name="earth-outline"></ion-icon>
+          <h1 class="location pr-6 text-sm md:text-base font-bold">
+            English (US)
+          </h1>
+          <h1 class="price text-sm md:text-base font-bold">$ USD</h1>
+          <div class="icons px-4 flex space-x-2">
+            <a href="#" class="text-gray-600 hidden md:block hover:text-black">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-gray-600 hidden md:block hover:text-black">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-600 hidden md:block hover:text-black">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright (in the middle) -->
+      <div class="flex justify-start pl-2 items-center order-2 md:order-1">
+        <div class="copyright-tag hover:cursor-pointer text-md md:text-base">
+          <span>&copy;</span>
+          2024 Airbnb.Inc.
+        </div>
+      </div>
+
+      <!-- Privacy, Terms, etc. (at the bottom) -->
+      <div class="flex-1 flex justify-start items-center order-3 md:order-2">
+        <div class="elements flex flex-row items-center">
+          <span class="px-2 hidden md:inline">.</span>
+          <h1 class="terms px-2 text-sm md:text-base">Terms</h1>
+          <span class="px-2 hidden md:inline">.</span>
+          <h1 class="sitemap px-2 text-sm md:text-base">Sitemap</h1>
+          <span class="px-2 hidden md:inline">.</span>
+          <h1 class="privacy px-2 text-sm md:text-base">Privacy</h1>
+          <span class="px-2 hidden md:inline">.</span>
+          <h1 class="privacy_choice px-2 text-sm md:text-base">
+            Your Privacy Choices
+          </h1>
+        </div>
+      </div>
+    </footer>
 
     <script
       type="module"

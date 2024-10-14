@@ -56,11 +56,12 @@ function previousImage() {
     }, 200); 
   }
   window.onload = updateButtons;
-
   function toggleDropdown() {
     const dropdown = document.getElementById('dropdown');
     dropdown.classList.toggle('hidden');
   }
+
+
 document.addEventListener("DOMContentLoaded", function(){
   const items= [
     {
