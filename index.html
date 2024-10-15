@@ -119,7 +119,7 @@
           <!-- Item 1 -->
           <div class="relative flex items-center group" id="dropdownButton">
             <div
-              class="rounded pr-32 hover:bg-gray-200 select-none hover:rounded-full p-[15px] pl-8 cursor-pointer"
+              class="rounded pr-32 select-none hover:bg-gray-200 select-none hover:rounded-full p-[15px] pl-8 cursor-pointer"
               onclick="toggleDropdown() "
             >
               <h1
@@ -174,14 +174,23 @@
           </div>
 
           <!-- Item 4 -->
-          <div class="relative flex items-center group">
+          <div class="relative flex items-center group" id="dropdownButton4">
             <div class="h-8 w-px bg-gray-300 group-hover:hidden"></div>
 
             <div
-              class="rounded pr-48 hover:rounded-full hover:bg-gray-200 p-[15px] cursor-pointer pl-6"
+              class="rounded select-none pr-48 hover:rounded-full hover:bg-gray-200 p-[15px] cursor-pointer pl-6"
+              onclick="toggleDropdown4()"
             >
               <h1 class="text-sm leading-[1] text-[#555] font-bold">Who</h1>
               <p class="text-gray-500 text-[13px]">Add guests</p>
+            </div>
+
+            <!-- Dropdown Content -->
+            <div
+              class="rounded text-left p-2 z-[2] shadow-2xl bg-white absolute w-[380px] right-[5px] top-[70px] rounded-[30px] h-[400px] hidden"
+              id="dropdown4"
+            >
+              <!-- The content will be dynamically generated -->
             </div>
           </div>
           <!-- Search Icon -->
