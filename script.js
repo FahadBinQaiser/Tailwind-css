@@ -60,8 +60,6 @@ function previousImage() {
     const dropdown = document.getElementById('dropdown');
     dropdown.classList.toggle('hidden');
   }
-
-
 document.addEventListener("DOMContentLoaded", function(){
   const items= [
     {
@@ -228,7 +226,7 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
   // Add recent searches (first 2 items)
-  items.slice(0, 2).forEach((item) => {
+  items.slice(0, 1).forEach((item) => {
     const itemHTML = createItemHTML(item);
     recentSearchesContainer.appendChild(itemHTML);
   });
@@ -241,4 +239,42 @@ document.addEventListener("DOMContentLoaded", function(){
 
 })
   
+function toggleDropdown4() {
+  const dropdown = document.getElementById('dropdown4');
+  dropdown.classList.toggle('hidden');
+}
+
+// Dynamically populate the dropdown after the DOM is loaded
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdownContent = document.getElementById('dropdown4');
   
+  const item4 = [
+    { id: 'box1', title: 'Adults', description: 'Ages 13 or above' },
+    { id: 'box2', title: 'Children', description: 'Ages 2 - 12' },
+    { id: 'box3', title: 'Infants', description: 'Under 2' },
+    { id: 'box4', title: 'Pets', description: 'Bringing a service animal?' }
+  ];
+
+  item4.forEach(item => {
+    const itemDiv = document.createElement('div');
+    itemDiv.classList.add('flex','m-6','border-b-2','pb-6', 'justify-between', 'items-center', );
+
+    const textDiv = document.createElement('div');
+    textDiv.innerHTML = `<h2 class="text-gray-700 font-medium">${item.title}</h2>
+                         <p class="text-gray-500 text-sm">${item.description}</p>`;
+
+    const counterDiv = document.createElement('div');
+    counterDiv.classList.add('flex', 'items-center');
+    counterDiv.innerHTML = `
+      <button class="bg-gray-200 px-2 py-1 text-gray-600 rounded-full w-8">-</button>
+      <span class="px-3 text-gray-700">0</span>
+      <button class="bg-gray-200 px-2 py-1 text-gray-600 rounded-full w-8" >+</button>
+    `;
+
+    itemDiv.appendChild(textDiv);
+    itemDiv.appendChild(counterDiv);
+
+    dropdownContent.appendChild(itemDiv);
+  });
+});
+
