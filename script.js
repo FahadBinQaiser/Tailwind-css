@@ -278,3 +278,51 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+function toggleDropdown2() {
+  const dropdown = document.getElementById('dropdown2');
+  dropdown.classList.toggle('hidden');
+}
+const listItems = document.querySelectorAll('li');
+
+listItems.forEach(item => {
+  item.addEventListener('click', () => {
+    listItems.forEach(li => {
+      li.classList.remove('bg-white', 'rounded-full', 'font-semibold', 'shadow', 'px-6');
+    });
+    
+    item.classList.add('bg-white', 'rounded-full', 'font-semibold', 'shadow', 'px-4');
+  });
+});
+
+function generateCalendar(days, elementId, startDay, disableUntil = 0) {
+  const calendar = document.getElementById(elementId);
+  const weekdays = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
+
+  weekdays.forEach(day => {
+    const dayElement = document.createElement('div');
+    dayElement.textContent = day;
+    dayElement.classList.add('font-medium', 'text-sm', 'text-gray-500', 'text-center');
+    calendar.appendChild(dayElement);
+  });
+
+  for (let i = 0; i < startDay; i++) {
+    const emptyElement = document.createElement('div');
+    calendar.appendChild(emptyElement); 
+  }
+
+  for (let i = 1; i <= days; i++) {
+    const dayElement = document.createElement('div');
+    dayElement.textContent = i;
+    dayElement.classList.add('text-center', 'p-2', 'rounded');
+
+    if (i <= disableUntil) {
+      dayElement.classList.add('text-gray-400');
+    } else {
+      dayElement.classList.add('bg-white', 'hover:bg-gray-300', 'cursor-pointer', 'hover:rounded-full');
+    }
+    calendar.appendChild(dayElement);
+  }
+}
+
+generateCalendar(31, 'left-calendar', 2, 17);
+generateCalendar(30, 'right-calendar', 5);
