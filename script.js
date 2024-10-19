@@ -326,3 +326,15 @@ function generateCalendar(days, elementId, startDay, disableUntil = 0) {
 
 generateCalendar(31, 'left-calendar', 2, 17);
 generateCalendar(30, 'right-calendar', 5);
+
+function showSection(clickedTab) {
+  const sections = document.querySelectorAll('.section');
+  sections.forEach(section => section.classList.add('hidden'));
+
+  const tabs = document.querySelectorAll('.tab-button');
+  tabs.forEach(tab => tab.classList.remove('bg-white', 'shadow', 'font-semibold'));
+
+  document.getElementById(`${clickedTab}-section`).classList.remove('hidden');
+
+  document.getElementById(`${clickedTab}-tab`).classList.add('bg-white', 'shadow', 'font-semibold');
+}

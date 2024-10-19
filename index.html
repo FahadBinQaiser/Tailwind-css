@@ -160,7 +160,7 @@
               <p class="text-gray-500 text-[13px]">Add dates</p>
             </div>
             <div
-              class="rounded text-left p-2 z-[2] shadow-2xl bg-white absolute w-[810px] left-[-250px] top-[70px] rounded-[30px] h-[410px] hidden"
+              class="rounded text-left p-2 z-[2] shadow-2xl bg-white absolute w-[810px] left-[-250px] top-[70px] rounded-[30px] h-[410px]"
               id="dropdown2"
             >
               <div class="flex">
@@ -168,41 +168,59 @@
                   class="items flex space-x-8 list-none mx-auto m-4 border p-2 rounded-full bg-gray-100 justify-evenly h-[45px] text-[15px] items-center"
                 >
                   <li
-                    id="dates"
-                    class="cursor-pointer w-24 text-center p-2 bg-white rounded-full font-semibold shadow"
+                    id="dates-tab"
+                    class="tab-button cursor-pointer w-24 text-center p-2 bg-white rounded-full font-semibold shadow"
+                    onclick="showSection('dates')"
                   >
                     Dates
                   </li>
-                  <li id="months" class="cursor-pointer w-24 text-center p-2">
+                  <li
+                    id="months-tab"
+                    class="tab-button cursor-pointer w-24 text-center p-2"
+                    onclick="showSection('months')"
+                  >
                     Months
                   </li>
-                  <li id="flexible" class="cursor-pointer w-24 text-center p-2">
+                  <li
+                    id="flexible-tab"
+                    class="tab-button cursor-pointer w-24 text-center p-2"
+                    onclick="showSection('flexible')"
+                  >
                     Flexible
                   </li>
                 </div>
               </div>
-              <div class="grid grid-cols-2 gap-2 p-2">
-                <!-- Left Grid for current month -->
-                <div class="left-grid p-4">
-                  <h2 class="text-[17px] font-medium text-center mb-4">
-                    October 2024
-                  </h2>
-                  <div
-                    id="left-calendar"
-                    class="grid grid-cols-7 gap-2 text-sm"
-                  ></div>
+              <div id="dates-section" class="section">
+                <div class="grid grid-cols-2 gap-2 p-2">
+                  <!-- Left Grid for current month -->
+                  <div class="left-grid p-4">
+                    <h2 class="text-[17px] font-medium text-center mb-4">
+                      October 2024
+                    </h2>
+                    <div
+                      id="left-calendar"
+                      class="grid grid-cols-7 gap-2 text-sm"
+                    ></div>
+                  </div>
+                  <!-- Right Grid for next month -->
+                  <div class="right-grid p-4">
+                    <h2 class="text-[17px] font-medium text-center mb-4">
+                      November 2024
+                    </h2>
+                    <div
+                      id="right-calendar"
+                      class="grid grid-cols-7 gap-2 text-sm"
+                    ></div>
+                  </div>
                 </div>
+              </div>
 
-                <!-- Right Grid for next month -->
-                <div class="right-grid p-4">
-                  <h2 class="text-[17px] font-medium text-center mb-4">
-                    November 2024
-                  </h2>
-                  <div
-                    id="right-calendar"
-                    class="grid grid-cols-7 gap-2 text-sm"
-                  ></div>
-                </div>
+              <div id="months-section" class="section hidden">
+                <h2 class="text-center text-lg">Months Content</h2>
+              </div>
+
+              <div id="flexible-section" class="section hidden">
+                <h2 class="text-center text-lg"></h2>
               </div>
             </div>
             <div class="h-8 w-px bg-gray-300 group-hover:hidden"></div>
