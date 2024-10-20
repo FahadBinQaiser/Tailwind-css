@@ -313,12 +313,12 @@ function generateCalendar(days, elementId, startDay, disableUntil = 0) {
   for (let i = 1; i <= days; i++) {
     const dayElement = document.createElement('div');
     dayElement.textContent = i;
-    dayElement.classList.add('text-center', 'p-2', 'rounded');
+    dayElement.classList.add('text-center','text-sm', 'p-2', 'w-10', 'h-10', 'rounded', 'border-2', 'border-transparent');
 
     if (i <= disableUntil) {
       dayElement.classList.add('text-gray-400');
     } else {
-      dayElement.classList.add('bg-white', 'hover:bg-gray-300', 'cursor-pointer', 'hover:rounded-full');
+      dayElement.classList.add('bg-white', 'cursor-pointer', 'hover:border-black', 'hover:rounded-full');
     }
     calendar.appendChild(dayElement);
   }
@@ -338,3 +338,139 @@ function showSection(clickedTab) {
 
   document.getElementById(`${clickedTab}-tab`).classList.add('bg-white', 'shadow', 'font-semibold');
 }
+
+const months = [
+  {
+    id:1,
+    title:"October",
+    description:"2024",
+  },
+  {
+    id:2,
+    title:"November",
+    description:"2024",
+  },
+  {
+    id:3,
+    title:"December",
+    description:"2024",
+  },
+  {
+    id:4,
+    title:"January",
+    description:"2025",
+  },
+  {
+    id:5,
+    title:"February",
+    description:"2025",
+  },
+  {
+    id:6,
+    title:"March",
+    description:"2025",
+  },
+  {
+    id:7,
+    title:"April",
+    description:"2025",
+  },
+  {
+    id:8,
+    title:"May",
+    description:"2025",
+  },
+  {
+    id:9,
+    title:"June",
+    description:"2025",
+  },
+  {
+    id:10,
+    title:"July",
+    description:"2024",
+  },
+  {
+    id:11,
+    title:"August",
+    description:"2025",
+  },
+  {
+    id:12,
+    title:"September",
+    description:"2025",
+  },
+  
+]
+document.addEventListener("DOMContentLoaded", function () {
+
+  const container = document.getElementById("container10");
+  container.classList.add("flex", "flex-row", "gap-2", "overflow-hidden", "mt-2");
+
+  const visibleMonths = months.slice(0, 6);
+  visibleMonths.forEach((month) => {
+
+    const monthBox = document.createElement("div");
+
+    // Add classes for each box
+    monthBox.classList.add(
+      "flex",
+      "flex-col",
+      "items-center",
+      "justify-center",
+      "border-2",
+      "p-2",
+      "rounded-[30px]",
+      "w-[130px]",
+      "h-36",
+      "cursor-pointer",
+      "hover:border-black"
+    );
+
+    // Add the content inside each box
+    monthBox.innerHTML = `
+      <div class="icon mb-2 font-normal">
+        <img src="https://img.icons8.com/material-outlined/48/000000/calendar--v1.png" class="w-8 h-8" />
+      </div>
+      <h3 class="font-[400] text-center">${month.title}</h3>
+      <p class="text-gray-500 text-center">${month.description}</p>
+    `;
+
+    // Append the box to the container
+    container.appendChild(monthBox);
+  });
+});
+
+const boxesData = [
+  { id: 1, title: "Exact dates"},
+  { id: 2, title: "1 day", },
+  { id: 3, title: "2 days",},
+  { id: 4, title: "3 days",},
+  { id: 5, title: "7 days",},
+  { id: 6, title: "14 days",}
+];
+
+function createBoxes() {
+  const container = document.getElementById('boxes-container');
+
+  boxesData.forEach(box => {
+    const boxElement = document.createElement('div');
+    boxElement.classList.add(
+      'w-full',
+      'flex',
+      'justify-evenly',
+      'items-center',
+      'flex-row',
+      'pl-4'
+    );
+
+    boxElement.innerHTML = `
+      <h2 class="anytime text-xs border-2 rounded-full font-medium mt-8 w-24 text-center p-2 ">
+        ${box.title}
+      </h2>
+    `;
+
+    container.appendChild(boxElement);
+  });
+}
+createBoxes();
