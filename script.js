@@ -474,3 +474,18 @@ function createBoxes() {
   });
 }
 createBoxes();
+
+function toggleDropdown(dropdownId) {
+  const dropdowns = ['dropdown', 'dropdown2', 'dropdown4'];
+
+  dropdowns.forEach((id) => {
+    const dropdown = document.getElementById(id);
+
+    if (id !== dropdownId) {
+      dropdown.classList.add('hidden');
+    }
+  });
+
+  const selectedDropdown = document.getElementById(dropdownId);
+  selectedDropdown.classList.toggle('hidden');
+}
