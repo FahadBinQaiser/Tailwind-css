@@ -57,7 +57,7 @@ function previousImage() {
   }
   window.onload = updateButtons;
   function toggleDropdown() {
-    const dropdown = document.getElementById('dropdown');
+    const dropdown = document.getElementById('primaryDropdown');
     dropdown.classList.toggle('hidden');
   }
 document.addEventListener("DOMContentLoaded", function(){
@@ -240,13 +240,13 @@ document.addEventListener("DOMContentLoaded", function(){
 })
   
 function toggleDropdown4() {
-  const dropdown = document.getElementById('dropdown4');
+  const dropdown = document.getElementById('fourthDropdown');
   dropdown.classList.toggle('hidden');
 }
 
 // Dynamically populate the dropdown after the DOM is loaded
 document.addEventListener("DOMContentLoaded", function () {
-  const dropdownContent = document.getElementById('dropdown4');
+  const dropdownContent = document.getElementById('fourthDropdown');
   
   const item4 = [
     { id: 'box1', title: 'Adults', description: 'Ages 13 or above' },
@@ -279,7 +279,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function toggleDropdown2() {
-  const dropdown = document.getElementById('dropdown2');
+  const dropdown = document.getElementById('secondaryDropdown');
   dropdown.classList.toggle('hidden');
 }
 const listItems = document.querySelectorAll('li');
@@ -476,7 +476,7 @@ function createBoxes() {
 createBoxes();
 
 function toggleDropdown(dropdownId) {
-  const dropdowns = ['dropdown', 'dropdown2', 'dropdown4'];
+  const dropdowns = ['primaryDropdown', 'secondaryDropdown', 'fourthDropdown'];
 
   dropdowns.forEach((id) => {
     const dropdown = document.getElementById(id);
