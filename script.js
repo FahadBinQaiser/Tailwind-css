@@ -313,7 +313,8 @@ function generateCalendar(days, elementId, startDay, disableUntil = 0) {
   for (let i = 1; i <= days; i++) {
     const dayElement = document.createElement('div');
     dayElement.textContent = i;
-    dayElement.classList.add('text-center','text-sm', 'p-2', 'w-10', 'h-10', 'rounded', 'border-2', 'border-transparent');
+    const calendarClasses = ['text-center','text-sm', 'p-2', 'w-10', 'h-10', 'rounded', 'border-2', 'border-transparent'];
+    dayElement.classList.add(...calendarClasses)
 
     if (i <= disableUntil) {
       dayElement.classList.add('text-gray-400');
