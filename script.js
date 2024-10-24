@@ -412,9 +412,7 @@ document.addEventListener("DOMContentLoaded", function () {
   visibleMonths.forEach((month) => {
 
     const monthBox = document.createElement("div");
-
-    // Add classes for each box
-    monthBox.classList.add(
+    const monthArray = [
       "flex",
       "flex-col",
       "items-center",
@@ -426,8 +424,8 @@ document.addEventListener("DOMContentLoaded", function () {
       "h-36",
       "cursor-pointer",
       "hover:border-black"
-    );
-
+    ]
+    monthBox.classList.add(...monthArray)
     // Add the content inside each box
     monthBox.innerHTML = `
       <div class="icon mb-2 font-normal">
