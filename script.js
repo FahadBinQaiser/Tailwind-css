@@ -425,7 +425,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "cursor-pointer",
       "hover:border-black"
     ]
-    monthBox.classList.add(...monthArray)
+    monthArray.forEach(className => monthBox.classList.add(className));
     // Add the content inside each box
     monthBox.innerHTML = `
       <div class="icon mb-2 font-normal">
