@@ -236,7 +236,7 @@
                   </h1>
 
                   <div
-                    class="circle relative flex flex-col justify-center items-center shadow-[inset_10px_35px_60px_-10px_rgba(0,0,0,0.3)] w-72 h-72 rounded-full"
+                    class="circle relative flex flex-col justify-center items-center shadow-[inset_10px_35px_60px_-10px_rgba(0,0,0,0.3)] w-72 h-72 rounded-full z-[-1]"
                   >
                     <span class="dot-1 absolute top-10 right-20 text-xl">
                       .
@@ -260,18 +260,23 @@
                       .
                     </span>
                     <span class="dot-12 absolute top-4 text-xl">.</span>
-                    <div class="relative">
+                    <div
+                      class="circle absolute flex flex-col justify-center items-center bg-pink-600 bg-gradient-to-r from-rose-600 z-[-1] w-72 h-72 rounded-full"
+                    >
                       <div
+                        class="white_circle absolute top-2 w-12 h-12 rounded-full bg-white"
+                      ></div>
+                      <!-- <div
                         class="red-color-line absolute -top-16 -left-2 bg-pink-600 w-28 h-16 rounded-bl-[3000px] rounded-tl-[3000px] rounded-tr-full bg-gradient-to-r from-rose-600 rounded-br-full border border-red-500"
                       >
                         <div
                           class="absolute right-2 top-2 rounded-full w-12 h-12 bg-white"
                         ></div>
-                      </div>
+                      </div> -->
                     </div>
 
                     <div
-                      class="flex flex-col justify-center items-center p-6 w-40 h-40 bg-white rounded-full shadow-[10px_35px_60px_10px_rgba(0,0,0,0.3)]"
+                      class="flex flex-col justify-center items-center p-6 w-40 h-40 bg-white rounded-full shadow-[10px_35px_60px_10px_rgba(0,0,0,0.3)] z-[1]"
                     >
                       <h1
                         class="heading text-7xl font-bold text-gray-800"
