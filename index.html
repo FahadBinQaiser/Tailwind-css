@@ -236,35 +236,86 @@
                   </h1>
 
                   <div
-                    class="circle relative flex flex-col justify-center items-center shadow-[inset_10px_35px_60px_-10px_rgba(0,0,0,0.3)] w-72 h-72 rounded-full z-[-1]"
+                    class="circle relative flex flex-col justify-center items-center shadow-[inset_10px_35px_60px_-10px_rgba(0,0,0,0.3)] w-72 h-72 rounded-full cursor-pointer"
                   >
-                    <span class="dot-1 absolute top-10 right-20 text-xl">
+                    <span
+                      class="dot absolute top-8 right-14 text-xl w-12 h-12 rounded-full"
+                      data-month="1"
+                    >
                       .
                     </span>
-                    <span class="dot-2 absolute top-20 right-10 text-xl">
+                    <span
+                      class="dot absolute top-20 right-10 text-xl w-12 h-12 rounded-full"
+                      data-month="2"
+                    >
                       .
                     </span>
-                    <span class="dot-3 absolute top-32 right-6 text-xl">.</span>
-                    <span class="dot-4 absolute top-44 right-10 text-xl">
+                    <span
+                      class="dot absolute top-32 right-6 text-xl w-12 h-12 rounded-full"
+                      data-month="3"
+                    >
                       .
                     </span>
-                    <span class="dot-5 absolute top-56 right-[70px] text-xl">
+                    <span
+                      class="dot absolute top-44 right-10 text-xl w-12 h-12 rounded-full"
+                      data-month="4"
+                    >
                       .
                     </span>
-                    <span class="dot-6 absolute top-[250px] text-xl">.</span>
-                    <span class="dot-7 absolute top-56 left-20 text-xl">.</span>
-                    <span class="dot-8 absolute top-44 left-10 text-xl">.</span>
-                    <span class="dot-9 absolute top-32 left-6 text-xl">.</span>
-                    <span class="dot-10 absolute top-20 left-8 text-xl">.</span>
-                    <span class="dot-11 absolute top-10 left-16 text-xl">
+                    <span
+                      class="dot absolute top-52 p-4 right-16 text-xl w-12 h-12 rounded-full"
+                      data-month="5"
+                    >
                       .
                     </span>
-                    <span class="dot-12 absolute top-4 text-xl">.</span>
+                    <span
+                      class="dot absolute bottom-4 text-xl w-12 h-12 rounded-full"
+                      data-month="6"
+                    >
+                      .
+                    </span>
+                    <span
+                      class="dot absolute top-56 left-20 text-xl w-12 h-12 rounded-full"
+                      data-month="7"
+                    >
+                      .
+                    </span>
+                    <span
+                      class="dot absolute top-44 left-10 text-xl w-12 h-12 rounded-full"
+                      data-month="8"
+                    >
+                      .
+                    </span>
+                    <span
+                      class="dot absolute top-32 left-6 text-xl w-12 h-12 rounded-full"
+                      data-month="9"
+                    >
+                      .
+                    </span>
+                    <span
+                      class="dot absolute top-20 left-8 text-xl w-12 h-12 rounded-full"
+                      data-month="10"
+                    >
+                      .
+                    </span>
+                    <span
+                      class="dot absolute top-10 left-16 text-xl w-12 h-12 rounded-full"
+                      data-month="11"
+                    >
+                      .
+                    </span>
+                    <span
+                      class="dot absolute top-4 text-xl w-12 h-12 rounded-full"
+                      data-month="12"
+                    >
+                      .
+                    </span>
                     <div
                       class="circle absolute flex flex-col justify-center items-center bg-pink-600 bg-gradient-to-r from-rose-600 z-[-1] w-72 h-72 rounded-full"
                     >
                       <div
-                        class="white_circle absolute top-2 w-12 h-12 rounded-full bg-white"
+                        id="white-circle"
+                        class="white_circle absolute w-12 h-12 rounded-full bg-white"
                       ></div>
                       <!-- <div
                         class="red-color-line absolute -top-16 -left-2 bg-pink-600 w-28 h-16 rounded-bl-[3000px] rounded-tl-[3000px] rounded-tr-full bg-gradient-to-r from-rose-600 rounded-br-full border border-red-500"
@@ -279,6 +330,7 @@
                       class="flex flex-col justify-center items-center p-6 w-40 h-40 bg-white rounded-full shadow-[10px_35px_60px_10px_rgba(0,0,0,0.3)] z-[1]"
                     >
                       <h1
+                        id="month-number"
                         class="heading text-7xl font-bold text-gray-800"
                         style="font-family: 'Montserrat', sans-serif"
                       >

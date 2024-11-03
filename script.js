@@ -488,3 +488,30 @@ function toggleDropdown(dropdownId) {
   const selectedDropdown = document.getElementById(dropdownId);
   selectedDropdown.classList.toggle('hidden');
 }
+
+
+const dots = document.querySelectorAll('.dot');
+const month = document.querySelector('#month-number')
+
+function selectDot(dot){
+  const previousSelectedDot = document.querySelector('.dot.bg-white');
+      if (previousSelectedDot) {
+          previousSelectedDot.classList.remove('bg-white', 'font-semibold', 'text-black');
+          previousSelectedDot.classList.add('bg-transparent');
+      }
+
+      dot.classList.remove('bg-transparent' );
+      dot.classList.add('bg-white', 'font-semibold', 'text-black',
+      'rounded-full','cursor-pointer'
+      );
+}
+
+const firstDot = document.querySelector('.dot[data-month="1"]');
+  selectDot(firstDot);
+
+dots.forEach(dot =>{
+  dot.addEventListener("click", function(){
+    selectDot(this);
+    month.innerHTML = this.dataset.month
+  })
+})
