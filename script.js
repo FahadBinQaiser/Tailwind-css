@@ -496,10 +496,10 @@ const month = document.querySelector('#month-number')
 function selectDot(dot){
   const previousSelectedDot = document.querySelector('.dot.bg-white');
       if (previousSelectedDot) {
-          previousSelectedDot.classList.remove('bg-white', 'font-semibold', 'text-black');
+          previousSelectedDot.classList.remove('bg-white', 'font-semibold', 'text-black', 'outline', 'outline-2', 'shadow-lg');
           previousSelectedDot.classList.add('bg-transparent');
       }
-
+      dot.classList.add('selected', 'bg-white', 'font-semibold', 'text-black', 'outline', 'outline-2', 'shadow-lg');
       dot.classList.remove('bg-transparent' );
       dot.classList.add('bg-white', 'font-semibold', 'text-black',
       'rounded-full','cursor-pointer'
