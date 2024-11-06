@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function(){
       id:1,
       title:"Islamabad",
       description:"Any week",
-      icon:"bx bx-home"
+      icon:"./icons/islamabad.png"
     },
     {
       id:2,
@@ -78,115 +78,115 @@ document.addEventListener("DOMContentLoaded", function(){
       id:3,
       title:"Istanbul, Türkiye",
       description:"For sights like Galata Tower For sights like Galata Tower",
-      icon:"bx bx-home"
+      icon:"./icons/istanbul.png"
     },
     {
       id:4,
       title:"London, United Kingdom",
       description:"For its bustling nightlife",
-      icon:"bx bx-home"
+      icon:"./icons/london.png"
     },
     {
       id:5,
       title:"Toronto, Canada",
       description:"For its top-notch dining",
-      icon:"bx bx-home"
+      icon:"./icons/toronto.png"
     },
     {
       id:6,
       title:"Mississauga, Canada",
       description:"For a trip abroad",
-      icon:"bx bx-home"
+      icon:"./icons/missisauga.png"
     },
     {
       id:7,
       title:"Rawalpindi, Pakistan",
       description:"Guests interested in Islamabad also looked here",
-      icon:"bx bx-home"
+      icon:"./icons/rawalpindi.png"
     },
     {
       id:8,
       title:"New York City, NY",
       description:"For sights like Central Park",
-      icon:"bx bx-home"
+      icon:"./icons/NY.webp"
     },
     {
       id:9,
       title:"Al Madīnah al Munawwarah, Saudi Arabia",
       description:"For a trip abroad",
-      icon:"bx bx-home"
+      icon:"./icons/madinah.webp"
     },
     {
       id:10,
       title:"Bangkok, Thailand",
       description:"For its bustling nightlife",
-      icon:"bx bx-home"
+      icon:"./icons/bangkok.png"
     },
     {
       id:11,
       title:"Paris, France",
       description:"For its stunning architecture",
-      icon:"bx bx-home"
+      icon:"./icons/paris.webp"
     },
     {
       id:12,
       title:"Calgary, Canada",
       description:"For nature-lovers",
-      icon:"bx bx-home"
+      icon:"./icons/calgary.webp"
     },
     {
       id:13,
       title:"Abu Dhabi, United Arab Emirates",
       description:"Popular beach destination",
-      icon:"bx bx-home"
+      icon:"./icons/abudhabi.png"
     },
     {
       id:14,
       title:"Antalya Province, Türkiye",
       description:"For sights like Duden Waterfalls",
-      icon:"bx bx-home"
+      icon:"./icons/antalya.png"
     },
     {
       id:15,
       title:"Jeddah, Saudi Arabia",
       description:"For its stunning architecture",
-      icon:"bx bx-home"
+      icon:"./icons/jeddah.png"
     },
     {
       id:16,
       title:"Baku, Azerbaijan",
       description:"For a trip abroad",
-      icon:"bx bx-home"
+      icon:"./icons/baku.webp"
     },
     {
       id:17,
       title:"Murree, Pakistan",
       description:"Guests interested in Islamabad also looked here",
-      icon:"bx bx-home"
+      icon:"./icons/murree.webp"
     },
     {
       id:18,
       title:"Rome, Italy",
       description:"For sights like Trevi Fountain",
-      icon:"bx bx-home"
+      icon:"./icons/rome.png"
     },
     {
       id:19,
       title:"Nathia Gali, Pakistan",
       description:"A short distance from your Islamabad search",
-      icon:"bx bx-home"
+      icon:"./icons/nathiagali.webp"
     },
     {
       id:20,
       title:"Izmir, Türkiye",
       description:"For a trip abroad",
-      icon:"bx bx-home"
+      icon:"./icons/izmir.png"
     },
     {
       id:21,
       title:"Riyadh, Saudi Arabia",
       description:"For sights like National Museum of Saudi Arabia",
-      icon:"bx bx-home"
+      icon:"./icons/madinah.webp"
     }
   ]
   const recentSearchesContainer = document.getElementById("recent-searches");
@@ -200,10 +200,19 @@ document.addEventListener("DOMContentLoaded", function(){
     const svgDiv = document.createElement("div");
     svgDiv.classList.add("svg", "w-12", "flex", "justify-center", "items-center");
 
-    const icon = document.createElement("ion-icon");
-    icon.name = item.icon;
-    icon.classList.add("text-4xl", "rounded-[10px]", "bg-yellow-100", "p-2", "text-[#666]");
-    svgDiv.appendChild(icon);
+    let iconElement;
+    if (item.icon.includes(".png") || item.icon.includes(".jpg") || item.icon.includes(".jpeg") || item.icon.includes(".webp")) {
+      iconElement = document.createElement("img");
+      iconElement.src = item.icon;  
+      iconElement.alt = item.title;
+      iconElement.classList.add("w-12", "h-12", "object-cover");
+    } else {
+      iconElement = document.createElement("ion-icon");
+      iconElement.name = item.icon;
+      iconElement.classList.add("text-4xl", "rounded-[10px]", "p-2", "text-[#666]");
+    }
+
+    svgDiv.appendChild(iconElement);
 
     const textDiv = document.createElement("div");
     textDiv.classList.add("islamabad", "flex", "flex-col", "pl-2");
