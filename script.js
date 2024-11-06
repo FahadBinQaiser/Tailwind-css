@@ -249,13 +249,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const dropdownContent = document.getElementById('fourthDropdown');
   
   const item4 = [
-    { id: 'box1', title: 'Adults', description: 'Ages 13 or above' },
-    { id: 'box2', title: 'Children', description: 'Ages 2 - 12' },
-    { id: 'box3', title: 'Infants', description: 'Under 2' },
-    { id: 'box4', title: 'Pets', description: 'Bringing a service animal?' }
+    { id: 'box1', title: 'Adults', description: 'Ages 13 or above', maxCount: 16 },
+    { id: 'box2', title: 'Children', description: 'Ages 2 - 12', maxCount: 5 },
+    { id: 'box3', title: 'Infants', description: 'Under 2', maxCount: 5 },
+    { id: 'box4', title: 'Pets', description: 'Bringing a service animal?', maxCount: 5 }
   ];
 
-  item4.forEach(item => {
+  const counts = {};
+  // console.log(counts)
+
+  item4.forEach((item) => {
+    counts[item.id] = 0;
+    // console.log(counts[item.id])
+
     const itemDiv = document.createElement('div');
     itemDiv.classList.add('flex','m-6','border-b-2','pb-6', 'justify-between', 'items-center', );
 
@@ -265,17 +271,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const counterDiv = document.createElement('div');
     counterDiv.classList.add('flex', 'items-center');
+    const counterId = `counterDisplay-${item.id}`;
+    // console.log(counterId)
     counterDiv.innerHTML = `
-      <button class="bg-gray-200 px-2 py-1 text-gray-600 rounded-full w-8">-</button>
-      <span class="px-3 text-gray-700">0</span>
-      <button class="bg-gray-200 px-2 py-1 text-gray-600 rounded-full w-8" >+</button>
+      <button class="bg-gray-200 px-2 py-1 text-gray-600 rounded-full w-8" onclick="decrement('${item.id}', ${item.maxCount})">-</button>
+
+      <span class="px-3 text-gray-700" id="${counterId}">0</span>
+      <button class="bg-gray-200 px-2 py-1 text-gray-600 rounded-full w-8" onclick="increment('${item.id}', ${item.maxCount})">+</button>
     `;
 
     itemDiv.appendChild(textDiv);
     itemDiv.appendChild(counterDiv);
-
     dropdownContent.appendChild(itemDiv);
   });
+
+  window.increment = function(itemId, maxCount) {
+    if (counts[itemId] < maxCount) {
+      counts[itemId]++;
+      updateCounterDisplay(itemId);
+    }
+  };
+
+  window.decrement = function(itemId, maxCount) {
+    if (counts[itemId] > 0) {
+      counts[itemId]--;
+      updateCounterDisplay(itemId);
+    }
+  };
+
+  function updateCounterDisplay(itemId) {
+    document.getElementById(`counterDisplay-${itemId}`).innerText = counts[itemId];
+  }
 });
 
 function toggleDropdown2() {
