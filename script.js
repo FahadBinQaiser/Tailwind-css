@@ -520,6 +520,16 @@ function toggleDropdown(dropdownId) {
     }
   });
 
+  function closeDropdownOnOutsideClick() {
+    document.addEventListener("click", function(event2) {      
+      if (!selectedDropdown.contains(event2.target) ) {
+        selectedDropdown.classList.add('hidden');
+      }
+    });
+    
+  }
+  closeDropdownOnOutsideClick();
+  
   const selectedDropdown = document.getElementById(dropdownId);
   selectedDropdown.classList.toggle('hidden');
 }
@@ -550,3 +560,28 @@ dots.forEach(dot =>{
     month.innerHTML = this.dataset.month
   })
 })
+
+const searchIcon = document.getElementById("searchIcon");
+const Boxes = document.querySelectorAll(".Search");
+
+Boxes.forEach(box =>{
+  box.addEventListener("click", function(event){
+    event.stopPropagation();
+    searchIcon.classList.add("w-16","h-16","transition-all", "duration-300", "ease-in-out");
+
+ 
+  })
+})
+function close(){
+  document.addEventListener("click", function(event){
+    if(!searchIcon.contains(event.target)){
+      searchIcon.classList.remove("w-16","h-16");
+      searchIcon.classList.add("w-4","h-4")
+    }
+    const span = searchIcon.querySelector("span");
+    if(span){
+      searchIcon.removeChild(span)
+    }
+  })
+}
+close()
