@@ -585,3 +585,22 @@ function close(){
   })
 }
 close()
+function handleScroll() {
+  const scrollPercentage = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+  const components = document.querySelectorAll('.remove');
+  const navbar = document.querySelector(".navbar");
+
+  if (scrollPercentage >= 0.2) {
+    components.forEach(component => {
+      component.classList.add('hidden');
+      component.classList.remove('flex');
+    });
+  } else {
+    components.forEach(component => {
+      component.classList.remove('hidden');
+      component.classList.add('flex');
+    });
+  }
+}
+
+window.addEventListener('scroll', handleScroll);
