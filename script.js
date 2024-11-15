@@ -564,14 +564,15 @@ dots.forEach(dot =>{
 const searchIcon = document.getElementById("searchIcon");
 const Boxes = document.querySelectorAll(".Search");
 
-Boxes.forEach(box =>{
-  box.addEventListener("click", function(event){
+Boxes.forEach((box, index) => {
+  box.addEventListener("click", function(event) {
     event.stopPropagation();
-    searchIcon.classList.add("w-16","h-16","transition-all", "duration-300", "ease-in-out");
-
- 
-  })
-})
+    searchIcon.classList.add("w-16", "h-16", "transition-all", "duration-300", "ease-in-out");
+    if (index === 1) {
+      searchIcon.classList.add("w-16", "h-16", "transition-all", "duration-300", "ease-in-out");
+    }
+  });
+});
 function close(){
   document.addEventListener("click", function(event){
     if(!searchIcon.contains(event.target)){
