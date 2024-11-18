@@ -567,16 +567,16 @@ const Boxes = document.querySelectorAll(".Search");
 Boxes.forEach((box, index) => {
   box.addEventListener("click", function(event) {
     event.stopPropagation();
-    searchIcon.classList.add("w-16", "h-16", "transition-all", "duration-300", "ease-in-out");
+    searchIcon.classList.add("w-20", "h-20", "transition-all", "duration-300", "ease-in-out");
     if (index === 1) {
-      searchIcon.classList.add("w-16", "h-16", "transition-all", "duration-300", "ease-in-out");
+      searchIcon.classList.add("w-20", "h-20", "transition-all", "duration-300", "ease-in-out");
     }
   });
 });
 function close(){
   document.addEventListener("click", function(event){
     if(!searchIcon.contains(event.target)){
-      searchIcon.classList.remove("w-16","h-16");
+      searchIcon.classList.remove("w-20","h-20");
       searchIcon.classList.add("w-4","h-4")
     }
     const span = searchIcon.querySelector("span");
@@ -586,17 +586,72 @@ function close(){
   })
 }
 close()
+const components = document.querySelectorAll('.remove');
+const headings = document.querySelector(".headingsToRemove");
+const container = document.querySelector(".container2");
+
+const changeNames = [
+  { element: document.getElementById("changeName1"), text: ["Anywhere", "Where"] },
+  { element: document.getElementById("changeName2"), text: ["Any week", "Check In"] },
+  { element: document.getElementById("changeName3"), text: ["Add guests", "Who"] },
+];
+
+const changeParas = [
+  { element: document.getElementById("changePara1"), text: ["", "Search destinations"] },
+  { element: document.getElementById("changePara2"), text: ["", "Add dates"] },
+  { element: document.getElementById("changePara3"), text: ["", "Add guests"] },
+];
+
+const boxStyles = [
+  { element: document.getElementById("boxStyles"), classes: ["pr-8", "hover:rounded-full", "hover:bg-none"] },
+  { element: document.getElementById("boxStyleSecondary"), classes: ["pl-4", "pr-4", "hover:rounded-full", "hover:bg-none"] },
+  { element: document.getElementById("boxStyleTernary"), classes: ["pr-10", "pl-2", "hover:rounded-none", "hover:bg-none"] },
+];
+
+const searchBar = document.getElementById("searchBar");
+const searchIconSame = document.querySelector(".searchIcon"); 
+
 function handleScroll() {
   const scrollPercentage = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
-  const components = document.querySelectorAll('.remove');
-  const navbar = document.querySelector(".navbar");
+  const threshold = 0.2;
 
-  if (scrollPercentage >= 0.2) {
+  if (scrollPercentage >= threshold) {
+    container.classList.add("absolute", "left-[500px]", "top-2");
+    headings?.classList.add("hidden");
+
+    boxStyles.forEach(({ element, classes }) => element?.classList.add(...classes));
+
+    changeNames.forEach(({ element, text }) => {
+      if (element) element.textContent = text[0];
+    });
+    changeParas.forEach(({ element }) => {
+      if (element) element.textContent = "";
+    });
+
+    searchBar?.classList.add("h-12");
+    searchIconSame?.classList.add("w-4", "h-4", "absolute", "top-0", "right-2");
+
     components.forEach(component => {
       component.classList.add('hidden');
       component.classList.remove('flex');
     });
+    
   } else {
+    container.classList.remove("absolute", "left-[500px]", "top-2");
+    headings?.classList.remove("hidden");
+
+    boxStyles.forEach(({ element, classes }) => element?.classList.remove(...classes));
+
+    changeNames.forEach(({ element, text }) => {
+      if (element) element.textContent = text[1];
+    });
+    changeParas.forEach(({ element, text }) => {
+      if (element) element.textContent = text[1];
+    });
+
+    searchBar?.classList.remove("h-12");
+    searchIconSame?.classList.remove("w-4", "h-4", "absolute", "top-0", "right-2");
+
     components.forEach(component => {
       component.classList.remove('hidden');
       component.classList.add('flex');

@@ -86,7 +86,7 @@
         </div>
 
         <div
-          class="remove flex justify-center ml-48 items-center text-lg text-center"
+          class="headingsToRemove remove flex justify-center ml-48 items-center text-lg text-center"
         >
           <h1 class="p-2 font-semibold">Stays</h1>
           <h1
@@ -121,6 +121,7 @@
       >
         <div
           class="rounded-full flex justify-between relative w-full font-[Roboto]"
+          id="searchBar"
         >
           <!-- Item 1 -->
           <div
@@ -129,12 +130,18 @@
           >
             <div
               class="rounded-[40px] pr-28 select-none hover:bg-gray-200 hover:rounded-full p-[15px] pl-8 cursor-pointer"
-              onclick="toggleDropdown('primaryDropdown')"
+              onclick="toggleDropdown('primaryDropdown') "
+              id="boxStyles"
             >
-              <h1 class="text-[13px] leading-[1] text-[#555] font-bold">
+              <h1
+                class="text-[13px] leading-[1] text-[#555] font-bold"
+                id="changeName1"
+              >
                 Where
               </h1>
-              <p class="text-gray-500 text-[13px]">Search destinations</p>
+              <p class="text-gray-500 text-[13px]" id="changePara1">
+                Search destinations
+              </p>
             </div>
             <div
               class="rounded-[40px] text-left p-2 z-[2] shadow-2xl bg-white absolute w-[440px] top-20 h-[402px] hidden"
@@ -159,12 +166,18 @@
           >
             <div
               class="rounded pr-16 hover:bg-gray-200 p-[15px] hover:rounded-full cursor-pointer px-8"
+              id="boxStyleSecondary"
               onclick="toggleDropdown('secondaryDropdown')"
             >
-              <h1 class="text-sm leading-[1] text-[#555] font-bold">
+              <h1
+                class="text-sm leading-[1] text-[#555] font-bold"
+                id="changeName2"
+              >
                 Check In
               </h1>
-              <p class="text-gray-500 text-[13px]">Add dates</p>
+              <p class="text-gray-500 text-[13px]" id="changePara2">
+                Add dates
+              </p>
             </div>
             <div
               class="rounded-[40px] text-left p-2 z-[2] shadow-2xl bg-white absolute w-[830px] left-[-270px] top-20 h-[450px] hidden"
@@ -391,10 +404,18 @@
 
             <div
               class="rounded select-none pr-40 hover:rounded-full hover:bg-gray-200 p-[15px] cursor-pointer pl-6"
+              id="boxStyleTernary"
               onclick="toggleDropdown('fourthDropdown')"
             >
-              <h1 class="text-[13px] leading-[1] text-[#555] font-bold">Who</h1>
-              <p class="text-gray-500 text-[13px]">Add guests</p>
+              <h1
+                class="text-[13px] leading-[1] text-[#555] font-bold"
+                id="changeName3"
+              >
+                Who
+              </h1>
+              <p class="text-gray-500 text-[13px]" id="changePara3">
+                Add guests
+              </p>
             </div>
             <div
               class="rounded-[40px] text-left p-2 z-[2] shadow-2xl bg-white absolute w-[380px] right-[5px] top-[70px] h-[400px] hidden"
@@ -407,9 +428,10 @@
           <!-- Search Icon -->
           <div
             class="rounded absolute right-0 top-2 pr-2 flex justify-center items-center"
+            id="searchIconDiv"
           >
             <ion-icon
-              class="text-8 text-white items-center cursor-pointer bg-red-600 p-4 border rounded-full w-4 h-4 hover:bg-rose-700"
+              class="searchIcon text-2 text-white items-center cursor-pointer bg-red-600 p-2 border rounded-full w-8 h-8 hover:bg-rose-700"
               name="search-outline"
               id="searchIcon"
             ></ion-icon>
