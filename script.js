@@ -567,9 +567,9 @@ const Boxes = document.querySelectorAll(".Search");
 Boxes.forEach((box, index) => {
   box.addEventListener("click", function(event) {
     event.stopPropagation();
-    searchIcon.classList.add("w-20", "h-20", "transition-all", "duration-300", "ease-in-out");
+    searchIcon.classList.add("w-20", "h-20", "transition-all", "duration-2000", "ease-in-out");
     if (index === 1) {
-      searchIcon.classList.add("w-20", "h-20", "transition-all", "duration-300", "ease-in-out");
+      searchIcon.classList.add("w-20", "h-20", "transition-all", "duration-2000", "ease-in-out");
     }
   });
 });
@@ -603,9 +603,9 @@ const changeParas = [
 ];
 
 const boxStyles = [
-  { element: document.getElementById("boxStyles"), classes: ["pr-8", "hover:rounded-full", "hover:bg-none"] },
-  { element: document.getElementById("boxStyleSecondary"), classes: ["pl-4", "pr-4", "hover:rounded-full", "hover:bg-none"] },
-  { element: document.getElementById("boxStyleTernary"), classes: ["pr-10", "pl-2", "hover:rounded-none", "hover:bg-none"] },
+  { element: document.getElementById("boxStyles"), classes: ["pr-8", "hover:rounded-full", "hover:bg-transparent"] },
+  { element: document.getElementById("boxStyleSecondary"), classes: ["pl-4", "pr-4", "hover:rounded-none", "hover:bg-transparent"] },
+  { element: document.getElementById("boxStyleTernary"), classes: ["pr-24", "pl-2","hover:rounded-none", "hover:bg-transparent"] },
 ];
 
 const searchBar = document.getElementById("searchBar");
@@ -614,7 +614,6 @@ const searchIconSame = document.querySelector(".searchIcon");
 function handleScroll() {
   const scrollPercentage = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
   const threshold = 0.2;
-
   if (scrollPercentage >= threshold) {
     container.classList.add("absolute", "left-[500px]", "top-2");
     headings?.classList.add("hidden");
@@ -629,8 +628,7 @@ function handleScroll() {
     });
 
     searchBar?.classList.add("h-12");
-    searchIconSame?.classList.add("w-4", "h-4", "absolute", "top-0", "right-2");
-
+    searchIconSame?.classList.add("w-2", "h-2","p-1", "absolute", "-top-1", "right-2" );
     components.forEach(component => {
       component.classList.add('hidden');
       component.classList.remove('flex');
@@ -650,7 +648,8 @@ function handleScroll() {
     });
 
     searchBar?.classList.remove("h-12");
-    searchIconSame?.classList.remove("w-4", "h-4", "absolute", "top-0", "right-2");
+    searchIconSame?.classList.remove("w-2", "h-2","p-1", "absolute", "-top-1", "right-2");
+
 
     components.forEach(component => {
       component.classList.remove('hidden');
