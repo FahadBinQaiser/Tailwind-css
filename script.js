@@ -567,22 +567,19 @@ const Boxes = document.querySelectorAll(".Search");
 Boxes.forEach((box, index) => {
   box.addEventListener("click", function(event) {
     event.stopPropagation();
-    searchIcon.classList.add("w-20", "h-20", "transition-all", "duration-2000", "ease-in-out");
+    searchIcon.classList.add("w-16", "h-16", "transition-all", "duration-500", "ease-out");
     if (index === 1) {
-      searchIcon.classList.add("w-20", "h-20", "transition-all", "duration-2000", "ease-in-out");
+      searchIcon.classList.add("w-16", "h-16", "transition-all", "duration-500", "ease-out");
     }
   });
 });
 function close(){
   document.addEventListener("click", function(event){
     if(!searchIcon.contains(event.target)){
-      searchIcon.classList.remove("w-20","h-20");
+      searchIcon.classList.remove("w-16","h-16");
       searchIcon.classList.add("w-4","h-4")
     }
-    const span = searchIcon.querySelector("span");
-    if(span){
-      searchIcon.removeChild(span)
-    }
+   
   })
 }
 close()
@@ -610,15 +607,20 @@ const boxStyles = [
 
 const searchBar = document.getElementById("searchBar");
 const searchIconSame = document.querySelector(".searchIcon"); 
+const navbar = document.querySelector(".navbar")
 
 function handleScroll() {
-  const scrollPercentage = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
-  const threshold = 0.2;
-  if (scrollPercentage >= threshold) {
-    container.classList.add("absolute", "left-[500px]", "top-2");
+  const scrollThreshold = 150; 
+
+  if (window.scrollY >= scrollThreshold) {
+    container.classList.add("absolute","left-[400px]","top-2","opacity-100","scale-[0.9]","md:left-[330px]","lg:left-[300px]"
+      ,"xl:left-[500px]" , "2xl:left-[550px]");
+    container.classList.remove("hidden");
     headings?.classList.add("hidden");
 
-    boxStyles.forEach(({ element, classes }) => element?.classList.add(...classes));
+    boxStyles.forEach(({ element, classes }) =>
+      element?.classList.add(...classes)
+    );
 
     changeNames.forEach(({ element, text }) => {
       if (element) element.textContent = text[0];
@@ -627,18 +629,28 @@ function handleScroll() {
       if (element) element.textContent = "";
     });
 
-    searchBar?.classList.add("h-12");
-    searchIconSame?.classList.add("w-2", "h-2","p-1", "absolute", "-top-1", "right-2" );
-    components.forEach(component => {
-      component.classList.add('hidden');
-      component.classList.remove('flex');
+    searchBar.classList.add("h-14");
+    searchBar.classList.remove("h-16");
+
+    searchIconSame?.classList.add("w-2","h-2","p-2","absolute","-top-1","right-2");
+    components.forEach((component) => {
+      component.classList.add("hidden");
+      component.classList.remove("flex");
     });
-    
+
+    navbar.classList.add("h-24");
   } else {
-    container.classList.remove("absolute", "left-[500px]", "top-2");
+    navbar.classList.remove("h-24");
+
+    container.classList.remove("absolute","left-[400px]","top-2","opacity-100","scale-[0.9]","md:left-[330px]","lg:left-[300px]",
+      "xl:left-[500px]" , "2xl:left-[550px]");
+
+    container.classList.remove("hidden");
     headings?.classList.remove("hidden");
 
-    boxStyles.forEach(({ element, classes }) => element?.classList.remove(...classes));
+    boxStyles.forEach(({ element, classes }) =>
+      element?.classList.remove(...classes)
+    );
 
     changeNames.forEach(({ element, text }) => {
       if (element) element.textContent = text[1];
@@ -647,15 +659,14 @@ function handleScroll() {
       if (element) element.textContent = text[1];
     });
 
-    searchBar?.classList.remove("h-12");
-    searchIconSame?.classList.remove("w-2", "h-2","p-1", "absolute", "-top-1", "right-2");
-
-
-    components.forEach(component => {
-      component.classList.remove('hidden');
-      component.classList.add('flex');
+    searchBar.classList.add("h-16");
+    searchBar.classList.remove("h-14");
+    searchIconSame?.classList.remove("w-2","h-2","p-2","absolute","-top-1","right-2");
+    components.forEach((component) => {
+      component.classList.remove("hidden");
+      component.classList.add("flex");
     });
   }
 }
 
-window.addEventListener('scroll', handleScroll);
+window.addEventListener("scroll", handleScroll);
