@@ -564,43 +564,109 @@ dots.forEach(dot =>{
 const searchIcon = document.getElementById("searchIcon");
 const Boxes = document.querySelectorAll(".Search");
 
-Boxes.forEach(box =>{
-  box.addEventListener("click", function(event){
+Boxes.forEach((box, index) => {
+  box.addEventListener("click", function(event) {
     event.stopPropagation();
-    searchIcon.classList.add("w-16","h-16","transition-all", "duration-300", "ease-in-out");
-
- 
-  })
-})
+    searchIcon.classList.add("w-16", "h-16", "transition-all", "duration-500", "ease-out");
+    if (index === 1) {
+      searchIcon.classList.add("w-16", "h-16", "transition-all", "duration-500", "ease-out");
+    }
+  });
+});
 function close(){
   document.addEventListener("click", function(event){
     if(!searchIcon.contains(event.target)){
       searchIcon.classList.remove("w-16","h-16");
       searchIcon.classList.add("w-4","h-4")
     }
-    const span = searchIcon.querySelector("span");
-    if(span){
-      searchIcon.removeChild(span)
-    }
+   
   })
 }
 close()
-function handleScroll() {
-  const scrollPercentage = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
-  const components = document.querySelectorAll('.remove');
-  const navbar = document.querySelector(".navbar");
+const components = document.querySelectorAll('.remove');
+const headings = document.querySelector(".headingsToRemove");
+const container = document.querySelector(".container2");
 
-  if (scrollPercentage >= 0.2) {
-    components.forEach(component => {
-      component.classList.add('hidden');
-      component.classList.remove('flex');
+const changeNames = [
+  { element: document.getElementById("changeName1"), text: ["Anywhere", "Where"] },
+  { element: document.getElementById("changeName2"), text: ["Any week", "Check In"] },
+  { element: document.getElementById("changeName3"), text: ["Add guests", "Who"] },
+];
+
+const changeParas = [
+  { element: document.getElementById("changePara1"), text: ["", "Search destinations"] },
+  { element: document.getElementById("changePara2"), text: ["", "Add dates"] },
+  { element: document.getElementById("changePara3"), text: ["", "Add guests"] },
+];
+
+const boxStyles = [
+  { element: document.getElementById("boxStyles"), classes: ["pr-8", "hover:rounded-full", "hover:bg-transparent"] },
+  { element: document.getElementById("boxStyleSecondary"), classes: ["pl-4", "pr-4", "hover:rounded-none", "hover:bg-transparent"] },
+  { element: document.getElementById("boxStyleTernary"), classes: ["pr-24", "pl-2","hover:rounded-none", "hover:bg-transparent"] },
+];
+
+const searchBar = document.getElementById("searchBar");
+const searchIconSame = document.querySelector(".searchIcon"); 
+const navbar = document.querySelector(".navbar")
+
+function handleScroll() {
+  const scrollThreshold = 150; 
+
+  if (window.scrollY >= scrollThreshold) {
+    container.classList.add("absolute","left-[400px]","top-2","opacity-100","scale-[0.9]","md:left-[330px]","lg:left-[300px]"
+      ,"xl:left-[500px]" , "2xl:left-[550px]");
+    container.classList.remove("hidden");
+    headings?.classList.add("hidden");
+
+    boxStyles.forEach(({ element, classes }) =>
+      element?.classList.add(...classes)
+    );
+
+    changeNames.forEach(({ element, text }) => {
+      if (element) element.textContent = text[0];
     });
+    changeParas.forEach(({ element }) => {
+      if (element) element.textContent = "";
+    });
+
+    searchBar.classList.add("h-14");
+    searchBar.classList.remove("h-16");
+
+    searchIconSame?.classList.add("w-2","h-2","p-2","absolute","-top-1","right-2");
+    components.forEach((component) => {
+      component.classList.add("hidden");
+      component.classList.remove("flex");
+    });
+
+    navbar.classList.add("h-24");
   } else {
-    components.forEach(component => {
-      component.classList.remove('hidden');
-      component.classList.add('flex');
+    navbar.classList.remove("h-24");
+
+    container.classList.remove("absolute","left-[400px]","top-2","opacity-100","scale-[0.9]","md:left-[330px]","lg:left-[300px]",
+      "xl:left-[500px]" , "2xl:left-[550px]");
+
+    container.classList.remove("hidden");
+    headings?.classList.remove("hidden");
+
+    boxStyles.forEach(({ element, classes }) =>
+      element?.classList.remove(...classes)
+    );
+
+    changeNames.forEach(({ element, text }) => {
+      if (element) element.textContent = text[1];
+    });
+    changeParas.forEach(({ element, text }) => {
+      if (element) element.textContent = text[1];
+    });
+
+    searchBar.classList.add("h-16");
+    searchBar.classList.remove("h-14");
+    searchIconSame?.classList.remove("w-2","h-2","p-2","absolute","-top-1","right-2");
+    components.forEach((component) => {
+      component.classList.remove("hidden");
+      component.classList.add("flex");
     });
   }
 }
 
-window.addEventListener('scroll', handleScroll);
+window.addEventListener("scroll", handleScroll);

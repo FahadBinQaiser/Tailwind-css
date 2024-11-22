@@ -30,7 +30,7 @@
     <!-- navbar -->
     <div class="mt-8 h-34 md:block lg:hidden border-b-2 px-4 shadow-lg">
       <div
-        class="bar_mobile flex justify-start font-[Roboto] items-center px-8 shadow-xl mt-8 rounded-full bg-gray-100 h-18 sm:flex sm:p-2"
+        class="bar_mobile flex justify-start font-[Roboto] items-center px-8 shadow-xl mt-8 rounded-full bg-gray-100 h-16 sm:flex sm:p-2"
       >
         <ion-icon
           class="text-2xl font-bold p-2 rounded-full w-4 h-4 cursor-pointer"
@@ -74,7 +74,7 @@
     </div>
 
     <div
-      class="navbar sticky top-0 z-10 h-38 w-full bg-white hidden lg:flex px-8 border justify-between flex-col"
+      class="navbar sticky top-0 z-10 h-40 w-full bg-white hidden lg:flex px-8 border justify-between flex-col scroll-ml-72"
     >
       <div class="flex items-center justify-between h-20">
         <div class="logo">
@@ -86,7 +86,7 @@
         </div>
 
         <div
-          class="remove flex justify-center ml-48 items-center text-lg text-center"
+          class="headingsToRemove remove flex justify-center ml-48 items-center text-lg text-center"
         >
           <h1 class="p-2 font-semibold">Stays</h1>
           <h1
@@ -117,10 +117,11 @@
       </div>
 
       <div
-        class="container2 hidden lg:flex justify-center items-center shadow-lg mb-4 border border-gray-300 rounded-full max-w-10/12 h-18 mx-auto"
+        class="container2 hidden lg:flex justify-center items-center shadow-lg mb-4 border border-gray-300 rounded-full max-w-10/12 h-16 mx-auto mt-2 opacity-100 scale-[1.1] transition-all duration-500 ease-in-out"
       >
         <div
-          class="rounded-full flex justify-between relative w-full font-[Roboto]"
+          class="rounded-full flex justify-between relative w-full font-[Roboto] transition-all duration-300 ease-in"
+          id="searchBar"
         >
           <!-- Item 1 -->
           <div
@@ -129,12 +130,18 @@
           >
             <div
               class="rounded-[40px] pr-28 select-none hover:bg-gray-200 hover:rounded-full p-[15px] pl-8 cursor-pointer"
-              onclick="toggleDropdown('primaryDropdown')"
+              onclick="toggleDropdown('primaryDropdown') "
+              id="boxStyles"
             >
-              <h1 class="text-[13px] leading-[1] text-[#555] font-bold">
+              <h1
+                class="text-[13px] leading-[1] text-[#555] font-bold"
+                id="changeName1"
+              >
                 Where
               </h1>
-              <p class="text-gray-500 text-[13px]">Search destinations</p>
+              <p class="text-gray-500 text-[13px]" id="changePara1">
+                Search destinations
+              </p>
             </div>
             <div
               class="rounded-[40px] text-left p-2 z-[2] shadow-2xl bg-white absolute w-[440px] top-20 h-[402px] hidden"
@@ -159,12 +166,18 @@
           >
             <div
               class="rounded pr-16 hover:bg-gray-200 p-[15px] hover:rounded-full cursor-pointer px-8"
+              id="boxStyleSecondary"
               onclick="toggleDropdown('secondaryDropdown')"
             >
-              <h1 class="text-sm leading-[1] text-[#555] font-bold">
+              <h1
+                class="text-sm leading-[1] text-[#555] font-bold"
+                id="changeName2"
+              >
                 Check In
               </h1>
-              <p class="text-gray-500 text-[13px]">Add dates</p>
+              <p class="text-gray-500 text-[13px]" id="changePara2">
+                Add dates
+              </p>
             </div>
             <div
               class="rounded-[40px] text-left p-2 z-[2] shadow-2xl bg-white absolute w-[830px] left-[-270px] top-20 h-[450px] hidden"
@@ -391,10 +404,18 @@
 
             <div
               class="rounded select-none pr-40 hover:rounded-full hover:bg-gray-200 p-[15px] cursor-pointer pl-6"
+              id="boxStyleTernary"
               onclick="toggleDropdown('fourthDropdown')"
             >
-              <h1 class="text-[13px] leading-[1] text-[#555] font-bold">Who</h1>
-              <p class="text-gray-500 text-[13px]">Add guests</p>
+              <h1
+                class="text-[13px] leading-[1] text-[#555] font-bold"
+                id="changeName3"
+              >
+                Who
+              </h1>
+              <p class="text-gray-500 text-[13px]" id="changePara3">
+                Add guests
+              </p>
             </div>
             <div
               class="rounded-[40px] text-left p-2 z-[2] shadow-2xl bg-white absolute w-[380px] right-[5px] top-[70px] h-[400px] hidden"
@@ -407,9 +428,10 @@
           <!-- Search Icon -->
           <div
             class="rounded absolute right-0 top-2 pr-2 flex justify-center items-center"
+            id="searchIconDiv"
           >
             <ion-icon
-              class="text-8 text-white items-center cursor-pointer bg-red-600 p-4 border rounded-full w-4 h-4 hover:bg-rose-700"
+              class="text-xs searchIcon text-white items-center cursor-pointer bg-red-600 p-4 border rounded-full w-4 h-4 hover:bg-rose-700"
               name="search-outline"
               id="searchIcon"
             ></ion-icon>
@@ -421,7 +443,7 @@
     <!-- navbar -->
     <!-- Search bar -->
     <div
-      class="wrapper bg-white flex justify-between mt-8 px-8 hover:font-bold font-[Roboto] w-full hover:cursor-pointer sm:hidden md:flex lg:flex"
+      class="wrapper sticky top-24 z-[5] bg-white flex justify-between mt-8 px-8 font-[Roboto] w-full cursor-pointer pt-0 sm:pt-0 md:pt-2 hover:font-bold sm:hidden md:flex lg:flex"
     >
       <div class="item pr-4 hidden lg:block text-center group">
         <ion-icon
